@@ -67,7 +67,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.btnMinimizar);
-            this.panel1.Controls.Add(this.btnRestaurar);
             this.panel1.Controls.Add(this.btnMaximizar);
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -96,7 +95,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.Image")));
-            this.btnRestaurar.Location = new System.Drawing.Point(1276, 9);
+            this.btnRestaurar.Location = new System.Drawing.Point(1245, 52);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(56, 37);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -335,7 +334,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // roundPicture1
             // 
             this.roundPicture1.Image = ((System.Drawing.Image)(resources.GetObject("roundPicture1.Image")));
-            this.roundPicture1.Location = new System.Drawing.Point(37, 58);
+            this.roundPicture1.Location = new System.Drawing.Point(43, 58);
             this.roundPicture1.Name = "roundPicture1";
             this.roundPicture1.Size = new System.Drawing.Size(184, 176);
             this.roundPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -349,6 +348,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1403, 664);
             this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnRestaurar);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);

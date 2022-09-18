@@ -277,7 +277,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(273, 188);
+            this.dataGridView1.Location = new System.Drawing.Point(270, 192);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1533, 441);
