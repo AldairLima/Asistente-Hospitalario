@@ -76,6 +76,15 @@
     <Compile Include="DOCTORES-PACIENTES.Designer.cs">
       <DependentUpon>DOCTORES-PACIENTES.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AreaMedica.cs" />
+    <Compile Include="Models\Cirugia.cs" />
+    <Compile Include="Models\Departamento.cs" />
+    <Compile Include="Models\Doctor.cs" />
+    <Compile Include="Models\Especialidad.cs" />
+    <Compile Include="Models\Expediente.cs" />
+    <Compile Include="Models\Ingreso.cs" />
+    <Compile Include="Models\SalaMedica.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundPicture.cs">
