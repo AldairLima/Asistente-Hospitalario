@@ -49,6 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADMINISTRADOR-CIRUJIA-PACIENTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMINISTRADOR-CIRUJIA-PACIENTE.Designer.cs">
+      <DependentUpon>ADMINISTRADOR-CIRUJIA-PACIENTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMINISTRADOR-PACIENTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMINISTRADOR-PACIENTE.Designer.cs">
+      <DependentUpon>ADMINISTRADOR-PACIENTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMINISTRADOR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMINISTRADOR.Designer.cs">
+      <DependentUpon>ADMINISTRADOR.cs</DependentUpon>
+    </Compile>
     <Compile Include="DOCTOR-ALTAS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +103,32 @@
     <Compile Include="Models\Ingreso.cs" />
     <Compile Include="Models\SalaMedica.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="PERFIL-AUXILIARES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PERFIL-AUXILIARES.Designer.cs">
+      <DependentUpon>PERFIL-AUXILIARES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PERFIL-DOCTORES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PERFIL-DOCTORES.Designer.cs">
+      <DependentUpon>PERFIL-DOCTORES.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundPicture.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="ADMINISTRADOR-CIRUJIA-PACIENTE.resx">
+      <DependentUpon>ADMINISTRADOR-CIRUJIA-PACIENTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMINISTRADOR-PACIENTE.resx">
+      <DependentUpon>ADMINISTRADOR-PACIENTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMINISTRADOR.resx">
+      <DependentUpon>ADMINISTRADOR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DOCTOR-ALTAS.resx">
       <DependentUpon>DOCTOR-ALTAS.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +140,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DOCTORES-PACIENTES.resx">
       <DependentUpon>DOCTORES-PACIENTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PERFIL-AUXILIARES.resx">
+      <DependentUpon>PERFIL-AUXILIARES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PERFIL-DOCTORES.resx">
+      <DependentUpon>PERFIL-DOCTORES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
