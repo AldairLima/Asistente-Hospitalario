@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 {
-    public partial class ADMINISTRADOR_CIRUJIAS_PACIENTE : Form
+    public partial class ADMINISTRADOR_CIRUJIA_PACIENTE : Form
     {
-        public ADMINISTRADOR_CIRUJIAS_PACIENTE()
+        public ADMINISTRADOR_CIRUJIA_PACIENTE()
         {
             InitializeComponent();
         }

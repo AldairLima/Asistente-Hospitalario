@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 {
-    public partial class perfil_doctores : Form
+    public partial class PERFIL_DOCTORES : Form
     {
-        public perfil_doctores()
+        public PERFIL_DOCTORES()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
