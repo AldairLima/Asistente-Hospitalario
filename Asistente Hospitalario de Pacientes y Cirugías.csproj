@@ -36,6 +36,9 @@
     <Reference Include="AlphaBlendTextBox">
       <HintPath>..\..\Recursos\AlphaBlendTextBox.dll</HintPath>
     </Reference>
+    <Reference Include="AMS.Profile, Version=2.0.7380.20748, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Ams.Profile.1.0.0\lib\net45\AMS.Profile.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -156,6 +159,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connection.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
