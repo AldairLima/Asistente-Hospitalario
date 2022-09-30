@@ -23,6 +23,7 @@ C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospital
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CopyComplete
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.exe
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.pdb
+<<<<<<< HEAD
 C:\Users\Gabriel\Desktop\Asistente-Hospitalario\bin\Debug\Asistente Hospitalario de Pacientes y Cirugías.exe.config
 C:\Users\Gabriel\Desktop\Asistente-Hospitalario\bin\Debug\Asistente Hospitalario de Pacientes y Cirugías.exe
 C:\Users\Gabriel\Desktop\Asistente-Hospitalario\bin\Debug\Asistente Hospitalario de Pacientes y Cirugías.pdb
@@ -42,3 +43,13 @@ C:\Users\Gabriel\Desktop\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario
 C:\Users\Gabriel\Desktop\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CopyComplete
 C:\Users\Gabriel\Desktop\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.exe
 C:\Users\Gabriel\Desktop\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.pdb
+=======
+C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ADMINISTRADOR_CIRUJIA_PACIENTE.resources
+C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ADMINISTRADOR_PACIENTE.resources
+C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ADMINISTRADOR.resources
+C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.DOCTOR_ALTAS.resources
+C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.DOCTOR_CIRUGÍAS.resources
+C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.PERFIL_AUXILIARES.resources
+C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.PERFIL_DOCTORES.resources
+C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Prueba.resources
+>>>>>>> 33afa595b079222aef6fe04ef5fe8dc6370bc510
