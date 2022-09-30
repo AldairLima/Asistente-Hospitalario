@@ -29,6 +29,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LOGIN));
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.alphaBlendTextBox1 = new ZBobb.AlphaBlendTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.alphaBlendTextBox2 = new ZBobb.AlphaBlendTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -150,12 +153,25 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.alphaBlendTextBox2.TabIndex = 11;
             this.alphaBlendTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(530, 654);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // LOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1158, 650);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -166,6 +182,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Name = "LOGIN";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.LOGIN_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,6 +197,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         private ZBobb.AlphaBlendTextBox alphaBlendTextBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private ZBobb.AlphaBlendTextBox alphaBlendTextBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

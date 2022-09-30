@@ -29,13 +29,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DOCTOR_CIRUGÍAS));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.roundPicture1 = new Asistente_Hospitalario_de_Pacientes_y_Cirugías.RoundPicture();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,8 +52,10 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).BeginInit();
+            this.roundPicture1 = new Asistente_Hospitalario_de_Pacientes_y_Cirugías.RoundPicture();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -113,21 +114,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button1.Text = "Pacientes";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // roundPicture1
-            // 
-            this.roundPicture1.Image = ((System.Drawing.Image)(resources.GetObject("roundPicture1.Image")));
-            this.roundPicture1.Location = new System.Drawing.Point(55, 58);
-            this.roundPicture1.Name = "roundPicture1";
-            this.roundPicture1.Size = new System.Drawing.Size(184, 176);
-            this.roundPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPicture1.TabIndex = 35;
-            this.roundPicture1.TabStop = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -307,12 +298,35 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox4.Size = new System.Drawing.Size(212, 26);
             this.textBox4.TabIndex = 52;
             // 
+            // roundPicture1
+            // 
+            this.roundPicture1.Image = ((System.Drawing.Image)(resources.GetObject("roundPicture1.Image")));
+            this.roundPicture1.Location = new System.Drawing.Point(55, 58);
+            this.roundPicture1.Name = "roundPicture1";
+            this.roundPicture1.Size = new System.Drawing.Size(184, 176);
+            this.roundPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPicture1.TabIndex = 35;
+            this.roundPicture1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(85, 256);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 31);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "USUARIO";
+            // 
             // DOCTOR_CIRUGÍAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1478, 627);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -332,8 +346,8 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DOCTOR_CIRUGÍAS";
             this.Text = "DOCTOR_CIRUGÍAS";
-            ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,5 +376,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label2;
     }
 }
