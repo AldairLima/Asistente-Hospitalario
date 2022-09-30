@@ -53,3 +53,7 @@ C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospital
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.PERFIL_DOCTORES.resources
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Prueba.resources
 >>>>>>> 33afa595b079222aef6fe04ef5fe8dc6370bc510
+C:\Users\Gabriel\Desktop\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.SECRETARIA_PACIENTE.resources
+C:\Users\Gabriel\Desktop\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.SECRETARIA_ALTAS.resources
+C:\Users\Gabriel\Desktop\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.SECRETARIA_CIRUGIAS.resources
+C:\Users\Gabriel\Desktop\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.SECRETARIA_DOCTOR.resources
