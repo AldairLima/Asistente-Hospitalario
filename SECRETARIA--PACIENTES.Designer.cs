@@ -149,7 +149,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // 
             this.roundPicture1.Image = ((System.Drawing.Image)(resources.GetObject("roundPicture1.Image")));
             this.roundPicture1.Location = new System.Drawing.Point(20, 23);
-            this.roundPicture1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.roundPicture1.Margin = new System.Windows.Forms.Padding(2);
             this.roundPicture1.Name = "roundPicture1";
             this.roundPicture1.Size = new System.Drawing.Size(184, 176);
             this.roundPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -304,6 +304,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.btnAgregarPaciente.TabIndex = 94;
             this.btnAgregarPaciente.Text = "Agregar";
             this.btnAgregarPaciente.UseVisualStyleBackColor = false;
+            this.btnAgregarPaciente.Click += new System.EventHandler(this.btnAgregarPaciente_Click);
             // 
             // btnAltaPaciente
             // 
@@ -430,9 +431,10 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Controls.Add(this.btnAltas);
             this.Controls.Add(this.btnPacientes);
             this.Controls.Add(this.roundPicture1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SECRETARIA_PACIENTE";
             this.Text = "PACIENTE";
+            this.Load += new System.EventHandler(this.SECRETARIA_PACIENTE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

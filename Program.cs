@@ -16,7 +16,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LOGIN());
+            Application.Run(new SECRETARIA_PACIENTE());
         }
     }
 }

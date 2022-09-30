@@ -182,9 +182,9 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(286, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 24);
+            this.label2.Size = new System.Drawing.Size(151, 24);
             this.label2.TabIndex = 87;
-            this.label2.Text = "Fecha Citujía:";
+            this.label2.Text = "Fecha Cirugías";
             // 
             // label1
             // 

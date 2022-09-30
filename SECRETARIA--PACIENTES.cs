@@ -16,5 +16,15 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void SECRETARIA_PACIENTE_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

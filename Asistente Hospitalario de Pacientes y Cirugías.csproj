@@ -88,12 +88,6 @@
     <Compile Include="GradientePanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DOCTORES-PACIENTES.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DOCTORES-PACIENTES.Designer.cs">
-      <DependentUpon>DOCTORES-PACIENTES.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\AreaMedica.cs" />
     <Compile Include="Models\Cirugia.cs" />
     <Compile Include="Models\Departamento.cs" />
@@ -103,6 +97,12 @@
     <Compile Include="Models\Ingreso.cs" />
     <Compile Include="Models\SalaMedica.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Pacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacientes.Designer.cs">
+      <DependentUpon>Pacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="PERFIL-AUXILIARES.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DOCTORES-PACIENTES.resx">
-      <DependentUpon>DOCTORES-PACIENTES.cs</DependentUpon>
+    <EmbeddedResource Include="Pacientes.resx">
+      <DependentUpon>Pacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PERFIL-AUXILIARES.resx">
       <DependentUpon>PERFIL-AUXILIARES.cs</DependentUpon>
