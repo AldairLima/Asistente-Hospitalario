@@ -134,12 +134,6 @@
     <Compile Include="GradientePanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DOCTORES-PACIENTES.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DOCTORES-PACIENTES.Designer.cs">
-      <DependentUpon>DOCTORES-PACIENTES.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\AreaMedica.cs" />
     <Compile Include="Models\Cirugia.cs" />
     <Compile Include="Models\Departamento.cs" />
@@ -183,9 +177,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DOCTORES-PACIENTES.resx">
-      <DependentUpon>DOCTORES-PACIENTES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PERFIL-AUXILIARES.resx">
       <DependentUpon>PERFIL-AUXILIARES.cs</DependentUpon>

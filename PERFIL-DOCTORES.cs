@@ -16,5 +16,10 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         {
             InitializeComponent();
         }
+
+        private void PERFIL_DOCTORES_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
