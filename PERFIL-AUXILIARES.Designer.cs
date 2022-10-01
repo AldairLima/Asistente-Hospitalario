@@ -286,7 +286,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PERFIL_AUXILIARES";
             this.Text = "PERFIL_AUXILIARES";
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).EndInit();

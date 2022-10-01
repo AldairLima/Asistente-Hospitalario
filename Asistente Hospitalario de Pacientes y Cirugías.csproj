@@ -32,13 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AlphaBlendTextBox">
       <HintPath>..\..\Recursos\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="AMS.Profile, Version=2.0.7380.20748, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Ams.Profile.1.0.0\lib\net45\AMS.Profile.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
@@ -135,6 +134,12 @@
     <Compile Include="GradientePanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DOCTORES-PACIENTES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DOCTORES-PACIENTES.Designer.cs">
+      <DependentUpon>DOCTORES-PACIENTES.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\AreaMedica.cs" />
     <Compile Include="Models\Cirugia.cs" />
     <Compile Include="Models\Departamento.cs" />
@@ -161,30 +166,6 @@
     <Compile Include="RoundPicture.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SECRETARIA-ALTA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SECRETARIA-ALTA.Designer.cs">
-      <DependentUpon>SECRETARIA-ALTA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SECRETARIA-CIRUGIA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SECRETARIA-CIRUGIA.Designer.cs">
-      <DependentUpon>SECRETARIA-CIRUGIA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SECRETARIA-DOCTOR.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SECRETARIA-DOCTOR.Designer.cs">
-      <DependentUpon>SECRETARIA-DOCTOR.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SECRETARIA--PACIENTES.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SECRETARIA--PACIENTES.Designer.cs">
-      <DependentUpon>SECRETARIA--PACIENTES.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="ADMINISTRADOR-CIRUJIA-PACIENTE.resx">
       <DependentUpon>ADMINISTRADOR-CIRUJIA-PACIENTE.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +184,9 @@
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DOCTORES-PACIENTES.resx">
+      <DependentUpon>DOCTORES-PACIENTES.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PERFIL-AUXILIARES.resx">
       <DependentUpon>PERFIL-AUXILIARES.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,18 +202,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SECRETARIA--PACIENTES.resx">
-      <DependentUpon>SECRETARIA--PACIENTES.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SECRETARIA-ALTA.resx">
-      <DependentUpon>SECRETARIA-ALTA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SECRETARIA-CIRUGIA.resx">
-      <DependentUpon>SECRETARIA-CIRUGIA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SECRETARIA-DOCTOR.resx">
-      <DependentUpon>SECRETARIA-DOCTOR.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="Connection.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -43,14 +43,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(848, 43);
+            this.label3.Location = new System.Drawing.Point(850, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 39);
             this.label3.TabIndex = 17;
@@ -58,15 +55,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(855, 509);
+            this.button1.Location = new System.Drawing.Point(857, 518);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 37);
             this.button1.TabIndex = 16;
@@ -75,14 +69,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(571, 412);
+            this.label2.Location = new System.Drawing.Point(573, 417);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 24);
             this.label2.TabIndex = 15;
@@ -90,14 +81,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(583, 169);
+            this.label1.Location = new System.Drawing.Point(585, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 24);
             this.label1.TabIndex = 14;
@@ -105,14 +93,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // 
             // alphaBlendTextBox1
             // 
-            this.alphaBlendTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.alphaBlendTextBox1.BackAlpha = 10;
             this.alphaBlendTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.alphaBlendTextBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphaBlendTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.alphaBlendTextBox1.Location = new System.Drawing.Point(700, 408);
+            this.alphaBlendTextBox1.Location = new System.Drawing.Point(702, 413);
             this.alphaBlendTextBox1.Name = "alphaBlendTextBox1";
             this.alphaBlendTextBox1.Size = new System.Drawing.Size(417, 33);
             this.alphaBlendTextBox1.TabIndex = 13;
@@ -121,16 +106,13 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // comboBox1
             // 
             this.comboBox1.AccessibleDescription = "";
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox1.Location = new System.Drawing.Point(841, 299);
+            this.comboBox1.Location = new System.Drawing.Point(843, 304);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(20);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(130, 34);
@@ -140,14 +122,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // 
             // alphaBlendTextBox2
             // 
-            this.alphaBlendTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.alphaBlendTextBox2.BackAlpha = 10;
             this.alphaBlendTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.alphaBlendTextBox2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alphaBlendTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.alphaBlendTextBox2.Location = new System.Drawing.Point(700, 169);
+            this.alphaBlendTextBox2.Location = new System.Drawing.Point(702, 174);
             this.alphaBlendTextBox2.Name = "alphaBlendTextBox2";
             this.alphaBlendTextBox2.Size = new System.Drawing.Size(417, 33);
             this.alphaBlendTextBox2.TabIndex = 11;
@@ -155,15 +134,13 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(530, 654);
+            this.pictureBox1.Size = new System.Drawing.Size(565, 650);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // LOGIN
             // 
@@ -179,6 +156,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Controls.Add(this.alphaBlendTextBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.alphaBlendTextBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LOGIN";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.LOGIN_Load);
