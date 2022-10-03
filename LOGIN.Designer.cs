@@ -156,7 +156,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Controls.Add(this.alphaBlendTextBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.alphaBlendTextBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LOGIN";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.LOGIN_Load);

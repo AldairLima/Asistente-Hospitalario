@@ -287,6 +287,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PERFIL_DOCTORES";
             this.Text = "PERFIL_DOCTORES";
+            this.Load += new System.EventHandler(this.PERFIL_DOCTORES_Load);
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
