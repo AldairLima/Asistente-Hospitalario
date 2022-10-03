@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AlphaBlendTextBox">
       <HintPath>..\..\Recursos\AlphaBlendTextBox.dll</HintPath>
@@ -78,6 +82,7 @@
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -125,6 +130,12 @@
     <Compile Include="DOCTOR-CIRUGÍAS.Designer.cs">
       <DependentUpon>DOCTOR-CIRUGÍAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tester.Designer.cs">
+      <DependentUpon>Tester.cs</DependentUpon>
+    </Compile>
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,12 +144,6 @@
     </Compile>
     <Compile Include="GradientePanel.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DOCTORES-PACIENTES.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DOCTORES-PACIENTES.Designer.cs">
-      <DependentUpon>DOCTORES-PACIENTES.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\AreaMedica.cs" />
     <Compile Include="Models\Cirugia.cs" />
@@ -166,6 +171,7 @@
     <Compile Include="RoundPicture.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Services\IngresoService.cs" />
     <EmbeddedResource Include="ADMINISTRADOR-CIRUJIA-PACIENTE.resx">
       <DependentUpon>ADMINISTRADOR-CIRUJIA-PACIENTE.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,11 +187,11 @@
     <EmbeddedResource Include="DOCTOR-CIRUGÍAS.resx">
       <DependentUpon>DOCTOR-CIRUGÍAS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tester.resx">
+      <DependentUpon>Tester.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DOCTORES-PACIENTES.resx">
-      <DependentUpon>DOCTORES-PACIENTES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PERFIL-AUXILIARES.resx">
       <DependentUpon>PERFIL-AUXILIARES.cs</DependentUpon>
@@ -202,7 +208,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connection.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

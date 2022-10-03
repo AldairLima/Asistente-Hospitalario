@@ -22,15 +22,15 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models
 
         public Ingreso(string codigoIngreso, int numeroExpediente, DateTime fechaIngreso, string diagnostico, DateTime? fechaAlta, string codigoDoctor, string codigoSala, int numeroCamilla, string diagnosticoFinal)
         {
-            CodigoIngreso = codigoIngreso;
-            NumeroExpediente = numeroExpediente;
-            FechaIngreso = fechaIngreso;
-            Diagnostico = diagnostico;
-            FechaAlta = fechaAlta;
-            CodigoDoctor = codigoDoctor;
-            CodigoSala = codigoSala;
-            NumeroCamilla = numeroCamilla;
-            DiagnosticoFinal = diagnosticoFinal;
+            this.CodigoIngreso = codigoIngreso;
+            this.NumeroExpediente = numeroExpediente;
+            this.FechaIngreso = fechaIngreso;
+            this.Diagnostico = diagnostico;
+            this.FechaAlta = fechaAlta;
+            this.CodigoDoctor = codigoDoctor;
+            this.CodigoSala = codigoSala;
+            this.NumeroCamilla = numeroCamilla;
+            this.DiagnosticoFinal = diagnosticoFinal;
         }
         public Ingreso() { }
 

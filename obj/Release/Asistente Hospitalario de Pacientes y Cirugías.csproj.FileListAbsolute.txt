@@ -1,0 +1,13 @@
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente Hospitalario de Pacientes y Cirugías.csproj.AssemblyReference.cache
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente Hospitalario de Pacientes y Cirugías.csproj.SuggestedBindingRedirects.cache
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ADMINISTRADOR_CIRUJIA_PACIENTE.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ADMINISTRADOR_PACIENTE.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ADMINISTRADOR.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente_Hospitalario_de_Pacientes_y_Cirugías.DOCTOR_ALTAS.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente_Hospitalario_de_Pacientes_y_Cirugías.DOCTOR_CIRUGÍAS.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente_Hospitalario_de_Pacientes_y_Cirugías.LOGIN.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente_Hospitalario_de_Pacientes_y_Cirugías.PERFIL_AUXILIARES.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente_Hospitalario_de_Pacientes_y_Cirugías.PERFIL_DOCTORES.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Properties.Resources.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente Hospitalario de Pacientes y Cirugías.csproj.GenerateResource.cache
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Release\Asistente Hospitalario de Pacientes y Cirugías.csproj.CoreCompileInputs.cache

@@ -23,3 +23,47 @@ C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospital
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CopyComplete
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.exe
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.pdb
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.AssemblyReference.cache
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.SuggestedBindingRedirects.cache
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.exe
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.pdb
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\Asistente Hospitalario de Pacientes y Cirugías.exe.config
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\Asistente Hospitalario de Pacientes y Cirugías.exe
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\Asistente Hospitalario de Pacientes y Cirugías.pdb
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\AMS.Profile.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\BouncyCastle.Crypto.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\Google.Protobuf.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\K4os.Compression.LZ4.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\K4os.Hash.xxHash.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\MySql.Data.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\System.Buffers.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\System.Memory.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\System.Numerics.Vectors.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\Ubiety.Dns.Core.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\ZstdNet.dll
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\BouncyCastle.Crypto.xml
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\Google.Protobuf.pdb
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\Google.Protobuf.xml
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\K4os.Compression.LZ4.xml
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\K4os.Hash.xxHash.xml
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\MySql.Data.xml
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\System.Buffers.xml
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\System.Memory.xml
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\System.Numerics.Vectors.xml
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ADMINISTRADOR_CIRUJIA_PACIENTE.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ADMINISTRADOR_PACIENTE.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ADMINISTRADOR.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.DOCTOR_ALTAS.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.DOCTOR_CIRUGÍAS.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.LOGIN.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.PERFIL_AUXILIARES.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.PERFIL_DOCTORES.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Properties.Resources.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.GenerateResource.cache
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CoreCompileInputs.cache
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CopyComplete
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Form1.resources
