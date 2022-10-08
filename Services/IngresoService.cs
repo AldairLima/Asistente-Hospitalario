@@ -48,10 +48,13 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                         null);
                     Expediente NuevoExpediente = new Expediente();
                     NuevoExpediente.setNumeroExpediente(NExp);
-                    NuevoExpediente.setNombrePaciente(Data[2].ToString());
+                    NuevoExpediente.setNombre(Data[2].ToString());
                     NuevoIngreso.setExpediente(NuevoExpediente);
                     IngresosActivos.Add(NuevoIngreso);
                 }
+                getActives = null;
+                bruteData = null;
+                Conex.Close();
             }
             catch (Exception error) {
                 MessageBox.Show(error.ToString());

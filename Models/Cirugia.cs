@@ -1,4 +1,5 @@
 ﻿using Asistente_Hospitalario_de_Pacientes_y_Cirugías.Modelos;
+using Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models.Nodos;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,44 +10,25 @@ using System.Threading.Tasks;
 
 namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models
 {
-    public class Cirugia
+    public class Cirugia : CasoMedico
     {
         //ATRIBUTES
         private string CodigoCirugia;
-        private DateTime FechaCirugia;
-        private string DiagnosticoCirugia;
-        private string DiagnosticoFinal;
-        private int NumeroExpediente;
-        private string CodigoSala;
         //LISTED ATRIBUTES
         private ArrayList Personal;
 
-        public Cirugia(string codigoCirugia, DateTime fechaCirugia, string diagnosticoCirugia, string diagnosticoFinal, int numeroExpediente, string codigoSala)
+        public Cirugia(string codigoCirugia, DateTime fechaCirugia, string diagnosticoCirugia, string diagnosticoFinal, int numeroExpediente, string codigoSala) : base(numeroExpediente, fechaCirugia, diagnosticoCirugia, diagnosticoFinal, codigoSala)
         {
             CodigoCirugia = codigoCirugia;
-            FechaCirugia = fechaCirugia;
-            DiagnosticoCirugia = diagnosticoCirugia;
-            DiagnosticoFinal = diagnosticoFinal;
-            NumeroExpediente = numeroExpediente;
-            CodigoSala = codigoSala;
         }
         public Cirugia() { }
 
         //GETTERS
         public string getCodigoCirugia() => this.CodigoCirugia;
-        public DateTime getFechaCirugia() => this.FechaCirugia;
-        public string getDiagnosticoCirugia() => this.DiagnosticoCirugia;
-        public string getDiagnosticoFinal() => this.DiagnosticoFinal;
-        public int getNumeroExpediente() => this.NumeroExpediente;
-        public string getCodigoSala() => this.CodigoSala;
 
         //SETTERS
         public void setCodigoCirugia(string codigoCirugia) => this.CodigoCirugia = codigoCirugia;
-        public void setFechaCirugia(DateTime fechaCirugia) => this.FechaCirugia = fechaCirugia;
-        public void setDiagnostico(string diagnosticoCirugia) => this.DiagnosticoCirugia = diagnosticoCirugia;
-        public void setDiagnosticoFinal(string diagnosticoFinal) => this.DiagnosticoFinal = diagnosticoFinal;
-        public void setNumeroExpediente(int numeroExpediente) => this.NumeroExpediente = numeroExpediente;
-        public void setCodigoSala(string codigoSala) => this.CodigoSala = codigoSala;
+        
 
         //LISTED GETTERS
         public ArrayList getPersonal() => this.Personal;
@@ -98,11 +80,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models
 
         public void setExpediente(Expediente expediente)
         {
-            if (expediente.getNumeroExpediente() == this.NumeroExpediente)
+            if (expediente.getNumeroExpediente() == this.getNumeroExpediente())
                 this.expedienteCirugia = expediente;
         }
         public void setSalaMedica(SalaMedica salaMedica) { 
-            if (salaMedica.getCodigoSala().Equals(this.CodigoSala))
+            if (salaMedica.getCodigoSala().Equals(this.getCodigoSala()))
                 this.salaCirugia = salaMedica;
         }
         public void addDoctor(Doctor doctor) {
