@@ -11,13 +11,15 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models.Nodos
         //ATRIBUTES
         private string DUI;
         private string Nombre;
+        private string Apellido
         private int Edad;
         private char Sexo;
 
-        public Persona(string dui, string nombre, int edad, char sexo)
+        public Persona(string dui, string nombre, string apellido, int edad, char sexo)
         {
             this.DUI = dui;
             this.Nombre = nombre;
+            this.Apellido = apellido;
             this.Edad = edad;
             this.Sexo = sexo;
         }
@@ -27,6 +29,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models.Nodos
         //GETTERS
         public string getDUI() => this.DUI;
         public string getNombre() => this.Nombre;
+        public string getApellido() => this.Apellido;
         public int getEdad() => this.Edad;
         public char getCharSexo() => this.Sexo;
         public string getSexo() {
@@ -44,6 +47,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models.Nodos
         //SETTERS
         public void setDUI(string dui) => this.DUI = dui;
         public void setNombre(string nombre) => this.Nombre = nombre;
+        public void setApellido(string apellido) => this.Apellido = apellido;
         public void setEdad(int edad) => this.Edad = edad;
         public void setSexo(char sexo) => this.Sexo = sexo;
     }
