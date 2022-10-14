@@ -23,16 +23,15 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            IngresoService IS = new IngresoService();
-            foreach (Ingreso item in IS.getAllActive())
-            {
-                MessageBox.Show("ID: " + item.getCodigoIngreso() +
-                    " | Exp: " + item.getNumeroExpediente() +
-                    " | Nombre: " + item.getExpediente().getNombrePaciente());
-            }
-            IS = null;
+
+            DataTable dt = IngresoService.getIngresosActivos();
+            dataGridView1.DataSource = dt;
            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

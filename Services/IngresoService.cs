@@ -16,17 +16,14 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
 {
     public class IngresoService
     {
-        private string ConnString;
 
-        public IngresoService() {
-            this.ConnString = Settings.Default.ConnectionString.ToString();
-        }
+        public IngresoService() { }
 
         //SELECT QUERIES
-        public DataTable getAllActive() {
+        public static DataTable getIngresosActivos() {
             try
             {
-                MySqlConnection Conex = new MySqlConnection(this.ConnString);
+                MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString.ToString());
                 Conex.Open();
 
                 string query = "SELECT ig.CodigoIngreso, ig.NumExpediente, ex.NombrePaciente, ig.FechaIngreso, ig.Diagnostico, ig.CodigoDoctor, ig.CodigoSala, ig.NumeroCamilla FROM ingreso AS ig JOIN expediente AS ex ON ex.NumExpediente = ig.NumExpediente WHERE ig.FechaAlta is null;";

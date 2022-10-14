@@ -67,3 +67,4 @@ D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asist
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CoreCompileInputs.cache
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CopyComplete
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Form1.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Tester.resources
