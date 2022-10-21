@@ -16,50 +16,31 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
 {
     public class IngresoService
     {
-        private string ConnString;
 
-        public IngresoService() {
-            this.ConnString = Settings.Default.ConnectionString.ToString();
-        }
+        public IngresoService() { }
 
         //SELECT QUERIES
-        public ArrayList getAllActive() {
-            ArrayList IngresosActivos = new ArrayList();
+        public static DataTable getIngresosActivos() {
             try
             {
-                MySqlConnection Conex = new MySqlConnection(this.ConnString);
+                MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString.ToString());
                 Conex.Open();
 
                 string query = "SELECT ig.CodigoIngreso, ig.NumExpediente, ex.NombrePaciente, ig.FechaIngreso, ig.Diagnostico, ig.CodigoDoctor, ig.CodigoSala, ig.NumeroCamilla FROM ingreso AS ig JOIN expediente AS ex ON ex.NumExpediente = ig.NumExpediente WHERE ig.FechaAlta is null;";
-                MySqlCommand getActives = new MySqlCommand(query, Conex);
-                MySqlDataReader bruteData = getActives.ExecuteReader();
-                foreach (IDataRecord Data in bruteData)
-                {
-                    int NExp = int.Parse(Data[1].ToString());
-                    Ingreso NuevoIngreso = new Ingreso(
-                        Data[0].ToString(),
-                        NExp,
-                        DateTime.Parse(Data[3].ToString()),
-                        Data[4].ToString(),
-                        null,
-                        Data[5].ToString(),
-                        Data[6].ToString(),
-                        int.Parse(Data[7].ToString()),
-                        null);
-                    Expediente NuevoExpediente = new Expediente();
-                    NuevoExpediente.setNumeroExpediente(NExp);
-                    NuevoExpediente.setNombre(Data[2].ToString());
-                    NuevoIngreso.setExpediente(NuevoExpediente);
-                    IngresosActivos.Add(NuevoIngreso);
-                }
-                getActives = null;
-                bruteData = null;
+                MySqlDataAdapter bruteData = new MySqlDataAdapter(query, Conex);
+                
+                DataTable Ingresos = new DataTable();
+                bruteData.Fill(Ingresos);
+
+                bruteData.Dispose();
                 Conex.Close();
+
+                return Ingresos;
             }
             catch (Exception error) {
                 MessageBox.Show(error.ToString());
+                return null;
             }
-            return IngresosActivos;
         }
     }
 }

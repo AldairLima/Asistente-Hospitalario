@@ -17,7 +17,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models
         private string CargoUsuario;
         private int RangoUsuario;
 
-        public Usuario(string codigoUsuario, string carnetUsuario, string duiUsuario, string nombreUsuario, string contrasena, int edadUsuario, char sexoUsuario, string codigoDepartamento, string cargoUsuario, int rangoUsuario):base(duiUsuario, nombreUsuario, edadUsuario, sexoUsuario)
+        public Usuario(string codigoUsuario, string carnetUsuario, string duiUsuario, string nombreUsuario, string apellidoUsuario, string contrasena, int edadUsuario, char sexoUsuario, string codigoDepartamento, string cargoUsuario, int rangoUsuario):base(duiUsuario, nombreUsuario, apellidoUsuario, edadUsuario, sexoUsuario)
         {
             this.CodigoUsuario = codigoUsuario;
             this.CarnetUsuario = carnetUsuario;

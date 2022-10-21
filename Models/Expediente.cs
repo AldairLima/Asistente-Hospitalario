@@ -15,7 +15,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Modelos
         private int NumeroExpediente;
 
 
-        public Expediente(int numeroExpediente, string nombrePaciente, string DUIpaciente, int edadPaciente, char sexoPaciente) : base(DUIpaciente, nombrePaciente, edadPaciente, sexoPaciente)
+        public Expediente(int numeroExpediente, string nombrePaciente, string apellidoPaciente, string DUIpaciente, int edadPaciente, char sexoPaciente) : base(DUIpaciente, nombrePaciente, apellidoPaciente, edadPaciente, sexoPaciente)
         {
             this.NumeroExpediente = numeroExpediente;
         }
