@@ -118,6 +118,12 @@
     <Compile Include="ADMINISTRADOR.Designer.cs">
       <DependentUpon>ADMINISTRADOR.cs</DependentUpon>
     </Compile>
+    <Compile Include="Agregar-Cirugías.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar-Cirugías.Designer.cs">
+      <DependentUpon>Agregar-Cirugías.cs</DependentUpon>
+    </Compile>
     <Compile Include="DOCTOR-ALTAS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ADMINISTRADOR.resx">
       <DependentUpon>ADMINISTRADOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agregar-Cirugías.resx">
+      <DependentUpon>Agregar-Cirugías.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DOCTOR-ALTAS.resx">
       <DependentUpon>DOCTOR-ALTAS.cs</DependentUpon>
