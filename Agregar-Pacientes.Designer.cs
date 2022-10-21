@@ -91,7 +91,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(496, 117);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(201, 26);
+            this.textBox2.Size = new System.Drawing.Size(226, 26);
             this.textBox2.TabIndex = 100;
             // 
             // label1
@@ -114,9 +114,9 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(20, 186);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 24);
+            this.label2.Size = new System.Drawing.Size(91, 24);
             this.label2.TabIndex = 102;
-            this.label2.Text = "Apellido";
+            this.label2.Text = "Apellidos";
             // 
             // textBox1
             // 
@@ -125,7 +125,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(116, 187);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 26);
+            this.textBox1.Size = new System.Drawing.Size(217, 26);
             this.textBox1.TabIndex = 103;
             // 
             // label6

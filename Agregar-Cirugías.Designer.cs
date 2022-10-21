@@ -37,7 +37,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -52,6 +51,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label3
@@ -145,25 +145,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label5.Size = new System.Drawing.Size(174, 24);
             this.label5.TabIndex = 66;
             this.label5.Text = "N° DE EXPEDIENTE";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.AccessibleDescription = "";
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox3.Location = new System.Drawing.Point(659, 154);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(20);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(125, 34);
-            this.comboBox3.TabIndex = 94;
-            this.comboBox3.Tag = "";
             // 
             // label6
             // 
@@ -364,12 +345,23 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox3.Size = new System.Drawing.Size(80, 26);
             this.textBox3.TabIndex = 109;
             // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(647, 157);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(141, 26);
+            this.textBox4.TabIndex = 110;
+            // 
             // Agregar_Cirugías
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(800, 593);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
@@ -384,7 +376,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
@@ -410,7 +401,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -425,5 +415,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
