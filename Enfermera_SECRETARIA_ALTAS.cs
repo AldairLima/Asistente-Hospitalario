@@ -21,5 +21,10 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

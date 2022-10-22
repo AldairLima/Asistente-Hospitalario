@@ -153,6 +153,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1373, 441);
             this.dataGridView1.TabIndex = 51;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Nombres
             // 

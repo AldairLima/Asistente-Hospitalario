@@ -154,6 +154,12 @@
     <Compile Include="ENFERMERA-SECRETARIA.Designer.cs">
       <DependentUpon>ENFERMERA-SECRETARIA.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enfermera_SECRETAIA_CIRUGÍA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enfermera_SECRETAIA_CIRUGÍA.Designer.cs">
+      <DependentUpon>Enfermera_SECRETAIA_CIRUGÍA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enfermera_SECRETARIA_ALTAS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,12 @@
     </Compile>
     <Compile Include="Enfermera_SECRETARIA_PACIENTE.Designer.cs">
       <DependentUpon>Enfermera_SECRETARIA_PACIENTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enfermera_SECRETERIA_DOCTORES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enfermera_SECRETERIA_DOCTORES.Designer.cs">
+      <DependentUpon>Enfermera_SECRETERIA_DOCTORES.cs</DependentUpon>
     </Compile>
     <Compile Include="ExpedienteCaso.cs">
       <SubType>Form</SubType>
@@ -245,11 +257,17 @@
     <EmbeddedResource Include="ENFERMERA-SECRETARIA.resx">
       <DependentUpon>ENFERMERA-SECRETARIA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Enfermera_SECRETAIA_CIRUGÍA.resx">
+      <DependentUpon>Enfermera_SECRETAIA_CIRUGÍA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Enfermera_SECRETARIA_ALTAS.resx">
       <DependentUpon>Enfermera_SECRETARIA_ALTAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Enfermera_SECRETARIA_PACIENTE.resx">
       <DependentUpon>Enfermera_SECRETARIA_PACIENTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enfermera_SECRETERIA_DOCTORES.resx">
+      <DependentUpon>Enfermera_SECRETERIA_DOCTORES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExpedienteCaso.resx">
       <DependentUpon>ExpedienteCaso.cs</DependentUpon>
