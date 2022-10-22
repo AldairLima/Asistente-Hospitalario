@@ -63,7 +63,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(89, 568);
+            this.button4.Location = new System.Drawing.Point(48, 522);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(123, 37);
             this.button4.TabIndex = 34;
@@ -77,7 +77,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(89, 489);
+            this.button3.Location = new System.Drawing.Point(48, 443);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 37);
             this.button3.TabIndex = 33;
@@ -91,7 +91,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(89, 407);
+            this.button2.Location = new System.Drawing.Point(48, 361);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 37);
             this.button2.TabIndex = 32;
@@ -106,7 +106,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(89, 319);
+            this.button1.Location = new System.Drawing.Point(48, 273);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 37);
             this.button1.TabIndex = 31;
@@ -116,7 +116,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             // roundPicture1
             // 
             this.roundPicture1.Image = ((System.Drawing.Image)(resources.GetObject("roundPicture1.Image")));
-            this.roundPicture1.Location = new System.Drawing.Point(53, 58);
+            this.roundPicture1.Location = new System.Drawing.Point(12, 12);
             this.roundPicture1.Name = "roundPicture1";
             this.roundPicture1.Size = new System.Drawing.Size(184, 176);
             this.roundPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,7 +130,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Location = new System.Drawing.Point(611, 83);
+            this.button6.Location = new System.Drawing.Point(602, 68);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(65, 29);
             this.button6.TabIndex = 43;
@@ -143,7 +143,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(786, 88);
+            this.label1.Location = new System.Drawing.Point(777, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 24);
             this.label1.TabIndex = 42;
@@ -156,7 +156,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.Location = new System.Drawing.Point(310, 83);
+            this.button5.Location = new System.Drawing.Point(301, 68);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(187, 29);
             this.button5.TabIndex = 41;
@@ -168,7 +168,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(532, 134);
+            this.textBox2.Location = new System.Drawing.Point(523, 119);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(212, 26);
             this.textBox2.TabIndex = 40;
@@ -178,7 +178,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(297, 135);
+            this.textBox1.Location = new System.Drawing.Point(288, 120);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(212, 26);
             this.textBox1.TabIndex = 39;
@@ -190,7 +190,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.White;
             this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Location = new System.Drawing.Point(771, 134);
+            this.dateTimePicker1.Location = new System.Drawing.Point(762, 119);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(193, 26);
             this.dateTimePicker1.TabIndex = 38;
@@ -207,7 +207,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(270, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(261, 177);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -269,7 +269,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
             this.dateTimePicker2.CalendarTrailingForeColor = System.Drawing.SystemColors.Window;
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker2.Location = new System.Drawing.Point(987, 135);
+            this.dateTimePicker2.Location = new System.Drawing.Point(978, 120);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(193, 26);
             this.dateTimePicker2.TabIndex = 44;
@@ -280,7 +280,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1016, 88);
+            this.label2.Location = new System.Drawing.Point(1007, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 24);
             this.label2.TabIndex = 45;
@@ -293,7 +293,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Transparent;
-            this.button7.Location = new System.Drawing.Point(1216, 98);
+            this.button7.Location = new System.Drawing.Point(1207, 83);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(105, 29);
             this.button7.TabIndex = 52;
@@ -305,7 +305,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(1205, 136);
+            this.textBox3.Location = new System.Drawing.Point(1196, 121);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(131, 26);
             this.textBox3.TabIndex = 51;

@@ -76,7 +76,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(63, 349);
+            this.button2.Location = new System.Drawing.Point(63, 342);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 37);
             this.button2.TabIndex = 37;
@@ -114,7 +114,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(63, 423);
+            this.button5.Location = new System.Drawing.Point(63, 418);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(123, 37);
             this.button5.TabIndex = 40;
