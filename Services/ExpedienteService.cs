@@ -35,11 +35,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 if (bruteData != null || bruteData.HasRows)
                 {
                     expediente = new Expediente(numExpediente,
-                        bruteData.GetValue(0).ToString(),
-                        bruteData.GetValue(1).ToString(),
-                        bruteData.GetValue(2).ToString(),
-                        int.Parse(bruteData.GetValue(3).ToString()),
-                        bruteData.GetValue(4).ToString()[0]);
+                        bruteData.GetString(0),
+                        bruteData.GetString(1),
+                        bruteData.GetString(2),
+                        bruteData.GetInt32(3),
+                        bruteData.GetChar(4));
                 }
 
                 executer.Connection.Close();

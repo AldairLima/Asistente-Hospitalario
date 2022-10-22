@@ -53,17 +53,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 Usuario session = null;
 
                 if (bruteData != null || bruteData.HasRows) {
-                    session = new Usuario(bruteData.GetValue(0).ToString(), //CODIGO
-                                          bruteData.GetValue(1).ToString(), //CARNET
-                                          bruteData.GetValue(2).ToString(), //DUI
-                                          bruteData.GetValue(3).ToString(), //NOMBRE
-                                          bruteData.GetValue(4).ToString(), //APELLIDO
-                                          bruteData.GetValue(5).ToString(), //CONTRASENA
-                                          int.Parse(bruteData.GetValue(6).ToString()), //EDAD
-                                          bruteData.GetValue(7).ToString().ToCharArray()[0], //SEXO
-                                          bruteData.GetValue(8).ToString(), //DEPARTAMENTO
-                                          bruteData.GetValue(9).ToString(), //CARGO
-                                          int.Parse(bruteData.GetValue(10).ToString())); //RANGO
+                    session = new Usuario(bruteData.GetString(0), //CODIGO
+                                          bruteData.GetString(1), //CARNET
+                                          bruteData.GetString(2), //DUI
+                                          bruteData.GetString(3), //NOMBRE
+                                          bruteData.GetString(4), //APELLIDO
+                                          bruteData.GetString(5), //CONTRASENA
+                                          bruteData.GetInt32(6),  //EDAD
+                                          bruteData.GetChar(7),   //SEXO
+                                          bruteData.GetString(8), //DEPARTAMENTO
+                                          bruteData.GetString(9), //CARGO
+                                          bruteData.GetInt32(10)); //RANGO
                 }
 
                 executer.Connection.Close();
@@ -95,17 +95,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
 
                 if (bruteData != null || bruteData.HasRows)
                 {
-                    userFound = new Usuario(bruteData.GetValue(0).ToString(), //CODIGO
-                                          bruteData.GetValue(1).ToString(), //CARNET
-                                          bruteData.GetValue(2).ToString(), //DUI
-                                          bruteData.GetValue(3).ToString(), //NOMBRE
-                                          bruteData.GetValue(4).ToString(), //APELLIDO
-                                          bruteData.GetValue(5).ToString(), //CONTRASENA
-                                          int.Parse(bruteData.GetValue(6).ToString()), //EDAD
-                                          bruteData.GetValue(7).ToString().ToCharArray()[0], //SEXO
-                                          bruteData.GetValue(8).ToString(), //DEPARTAMENTO
-                                          bruteData.GetValue(9).ToString(), //CARGO
-                                          int.Parse(bruteData.GetValue(10).ToString())); //RANGO
+                    userFound = new Usuario(bruteData.GetString(0), //CODIGO
+                                          bruteData.GetString(1), //CARNET
+                                          bruteData.GetString(2), //DUI
+                                          bruteData.GetString(3), //NOMBRE
+                                          bruteData.GetString(4), //APELLIDO
+                                          bruteData.GetString(5), //CONTRASENA
+                                          bruteData.GetInt32(6),  //EDAD
+                                          bruteData.GetChar(7),   //SEXO
+                                          bruteData.GetString(8), //DEPARTAMENTO
+                                          bruteData.GetString(9), //CARGO
+                                          bruteData.GetInt32(10)); //RANGO
                 }
 
                 executer.Connection.Close();

@@ -79,18 +79,18 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
                 DateTime? altaF = null;
-                if (bruteData.GetValue(3) != null) altaF = DateTime.Parse(bruteData.GetValue(3).ToString());
+                if (bruteData.GetValue(3) != null) altaF = bruteData.GetDateTime(3);
 
                 Ingreso foundIngreso = new Ingreso(
                     codigoIngreso,
-                    int.Parse(bruteData.GetValue(0).ToString()),
-                    DateTime.Parse(bruteData.GetValue(1).ToString()),
-                    bruteData.GetValue(2).ToString(),
+                    bruteData.GetInt32(0),
+                    bruteData.GetDateTime(1),
+                    bruteData.GetString(2),
                     altaF,
-                    bruteData.GetValue(4).ToString(),
-                    bruteData.GetValue(5).ToString(),
-                    int.Parse(bruteData.GetValue(6).ToString()),
-                    bruteData.GetValue(7).ToString()
+                    bruteData.GetString(4),
+                    bruteData.GetString(5),
+                    bruteData.GetInt32(6),
+                    bruteData.GetString(7)
                     );
 
                 bruteData.Close();

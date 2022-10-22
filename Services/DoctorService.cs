@@ -47,12 +47,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
                 Doctor doctor = new Doctor(
-                        bruteData.GetValue(0).ToString(),
-                        bruteData.GetValue(1).ToString(), //Usuario
-                        bruteData.GetValue(2).ToString() //Especialidad
+                        bruteData.GetString(0),
+                        bruteData.GetString(1), //Usuario
+                        bruteData.GetString(2) //Especialidad
                     );
-                Usuario usuario = UsuarioService.getUsuarioByKey(bruteData.GetValue(1).ToString());
-                Especialidad especialidad = new Especialidad(bruteData.GetValue(2).ToString(), bruteData.GetValue(4).ToString());
+                Usuario usuario = UsuarioService.getUsuarioByKey(bruteData.GetString(1));
+                Especialidad especialidad = new Especialidad(bruteData.GetString(2), bruteData.GetString(4));
 
                 doctor.setUsuario(usuario);
                 doctor.setEspecialidad(especialidad);

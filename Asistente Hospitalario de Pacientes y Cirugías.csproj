@@ -140,6 +140,7 @@
     <Compile Include="Models\Nodos\Persona.cs" />
     <Compile Include="Services\DoctorService.cs" />
     <Compile Include="Services\ExpedienteService.cs" />
+    <Compile Include="Services\SalaService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
     <Compile Include="Tester.cs">
       <SubType>Form</SubType>
