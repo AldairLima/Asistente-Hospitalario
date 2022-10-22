@@ -154,6 +154,12 @@
     <Compile Include="ENFERMERA-SECRETARIA.Designer.cs">
       <DependentUpon>ENFERMERA-SECRETARIA.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enfermera_SECRETARIA_ALTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enfermera_SECRETARIA_ALTAS.Designer.cs">
+      <DependentUpon>Enfermera_SECRETARIA_ALTAS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enfermera_SECRETARIA_PACIENTE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ENFERMERA-SECRETARIA.resx">
       <DependentUpon>ENFERMERA-SECRETARIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enfermera_SECRETARIA_ALTAS.resx">
+      <DependentUpon>Enfermera_SECRETARIA_ALTAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Enfermera_SECRETARIA_PACIENTE.resx">
       <DependentUpon>Enfermera_SECRETARIA_PACIENTE.cs</DependentUpon>
