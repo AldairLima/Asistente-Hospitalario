@@ -148,6 +148,12 @@
     <Compile Include="DOCTOR-CIRUGÍAS.Designer.cs">
       <DependentUpon>DOCTOR-CIRUGÍAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="ENFERMERA-SECRETARIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ENFERMERA-SECRETARIA.Designer.cs">
+      <DependentUpon>ENFERMERA-SECRETARIA.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExpedienteCaso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DOCTOR-CIRUGÍAS.resx">
       <DependentUpon>DOCTOR-CIRUGÍAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ENFERMERA-SECRETARIA.resx">
+      <DependentUpon>ENFERMERA-SECRETARIA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExpedienteCaso.resx">
       <DependentUpon>ExpedienteCaso.cs</DependentUpon>
