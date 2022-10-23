@@ -21,10 +21,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         //CONSULTA
         //
         public static Usuario ValidateLogin(string UsuarioLogin, string Password, int rango) {
+            MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString.ToString());
+            conex.Open();
             try
             {
-                MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString.ToString());
-                conex.Open();
+                
                 string SQLQuery;
                 if (UsuarioLogin.Length <= 6 && !UsuarioLogin.Contains(' '))
                 {
@@ -51,8 +52,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
                 Usuario session = null;
-
-                if (bruteData != null || bruteData.HasRows) {
+                if (bruteData.HasRows) {
                     session = new Usuario(bruteData.GetString(0), //CODIGO
                                           bruteData.GetString(1), //CARNET
                                           bruteData.GetString(2), //DUI
@@ -67,33 +67,35 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 }
 
                 executer.Connection.Close();
-                bruteData.Close();
-                conex.Close();
                 executer.Dispose();
-                bruteData = null;
-                conex = null;
+                bruteData.Close();
+                bruteData.Dispose();
+                conex.Close();
+                conex.Dispose();
 
                 return session;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                conex.Close();
+                conex.Dispose();
+                MessageBox.Show(e.Message);
                 return null;
             }
         }
 
-        public static Usuario getUsuarioByKey(string idUsuario) {
+        public static Usuario getUsuarioByKey(string idUsuario) 
+        {
+            MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString.ToString());
+            conex.Open();
             try
-            {
-                MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString.ToString());
-                conex.Open();
-
+            {        
                 string SQLQuery = string.Format("SELECT CodigoUsuario, CarnetUsuario, DUI, NombreUsuario, ApellidoUsuario, Contrasena, EdadUsuario, SexoUsuario, CodigoDepartamento, CargoUsuario, RangoUsuario FROM usuario WHERE CodigoUsuario='{0}' or DUI='{0}';", idUsuario);
                 MySqlCommand executer = new MySqlCommand(SQLQuery, conex);
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
                 Usuario userFound = null;
-
-                if (bruteData != null || bruteData.HasRows)
+                if (bruteData.HasRows)
                 {
                     userFound = new Usuario(bruteData.GetString(0), //CODIGO
                                           bruteData.GetString(1), //CARNET
@@ -109,39 +111,47 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 }
 
                 executer.Connection.Close();
-                bruteData.Close();
-                conex.Close();
                 executer.Dispose();
-                bruteData = null;
-                conex = null;
+                bruteData.Close();
+                bruteData.Dispose();
+                
+                conex.Close();
+                conex.Dispose();
 
                 return userFound;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                conex.Close();
+                conex.Dispose();
+                MessageBox.Show(e.Message);
                 return null;
             }
         }
 
-        public static DataTable getAllUsuarios() {
+        public static DataTable getAllUsuarios() 
+        {
+            MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
+            conex.Open();
             try
             {
-                MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
-                conex.Open();
-
+                
                 string query = "SELECT CodigoUsuario, CarnetUsuario, DUI, NombreUsuario, ApellidoUsuario, Contrasena, EdadUsuario, SexoUsuario, CodigoDepartamento, CargoUsuario, RangoUsuario FROM usuario;";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, conex);
                 DataTable usuarios = new DataTable();
                 adapter.Fill(usuarios);
 
-                adapter = null;
+                adapter.Dispose();
+
                 conex.Close();
-                conex = null;
+                conex.Dispose();
 
                 return usuarios;
             }
             catch (Exception e)
             {
+                conex.Close();
+                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
             }
@@ -150,12 +160,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         //
         //INSERT
         //
-        public static void createUsuario(Usuario newUser) {
+        public static void createUsuario(Usuario newUser) 
+        {
+            MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
+            Conex.Open();
             try
-            {
-                MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
-                Conex.Open();
-
+            {        
                 if (newUser != null && newUser.getCodigoUsuario() == null) {
                     /*CREACIÓN CODIGO USUARIO*/
                     string iniciales = newUser.getNombre()[0].ToString() + newUser.getApellido()[0].ToString();
@@ -176,10 +186,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Dispose();
                 }
                 Conex.Close();
-                Conex = null;
+                Conex.Dispose();
             }
             catch (Exception e)
             {
+                Conex.Close();
+                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
             }
@@ -190,11 +202,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         //
         public static void updateUsuario(Usuario usuario)
         {
+            MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
+            Conex.Open();
             try
             {
-                MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
-                Conex.Open();
-
+                
                 if (usuario != null && usuario.getCodigoUsuario() != null)
                 {
                     
@@ -209,24 +221,25 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Dispose();
                 }
                 Conex.Close();
-                Conex = null;
+                Conex.Dispose();
             }
             catch (Exception e)
             {
+                Conex.Close();
+                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
             }
         }
 
-        public static void setNewPassword(string codigoUsuario, string nuevaContrasena) {
+        public static void setNewPassword(string codigoUsuario, string nuevaContrasena) 
+        {
+            MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
+            Conex.Open();
             try
             {
-                MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
-                Conex.Open();
-
                 if (codigoUsuario != null)
                 {
-
                     string queryUsuario = string.Format("update usuario set Contrasena='{1}' where CodigoUsuario='{0}';",
                         codigoUsuario, nuevaContrasena);
                     MySqlCommand executer = new MySqlCommand(queryUsuario, Conex);
@@ -236,10 +249,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Dispose();
                 }
                 Conex.Close();
-                Conex = null;
+                Conex.Dispose();
             }
             catch (Exception e)
             {
+                Conex.Close();
+                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
             }
@@ -248,15 +263,14 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         //
         //DELETE
         //
-        public static void deleteUsuario(string codigoUsuario) {
+        public static void deleteUsuario(string codigoUsuario) 
+        {
+            MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
+            Conex.Open();
             try
             {
-                MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
-                Conex.Open();
-
                 if (codigoUsuario != null)
-                {
-                    
+                {            
                     string queryUsuario = string.Format("DELETE FROM usuario WHERE CodigoUsuario='{0}';",codigoUsuario);
                     MySqlCommand executer = new MySqlCommand(queryUsuario, Conex);
                     executer.ExecuteNonQuery();
@@ -265,10 +279,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Dispose();
                 }
                 Conex.Close();
-                Conex = null;
+                Conex.Dispose();
             }
             catch (Exception e)
             {
+                Conex.Close();
+                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
             }

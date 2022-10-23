@@ -21,18 +21,18 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         //
         public static Expediente getExpedienteByKey(int numExpediente)
         {
+            MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString.ToString());
+            conex.Open();
             try
             {
-                MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString.ToString());
-                conex.Open();
-
+                
                 string SQLQuery = string.Format("SELECT NombrePaciente, ApellidoPaciente, DUIPaciente, EdadPaciente, SexoPaciente FROM expediente WHERE NumeroExpediente={0};", numExpediente);
                 MySqlCommand executer = new MySqlCommand(SQLQuery, conex);
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
                 Expediente expediente = null;
 
-                if (bruteData != null || bruteData.HasRows)
+                if (bruteData.HasRows)
                 {
                     expediente = new Expediente(numExpediente,
                         bruteData.GetString(0),
@@ -42,17 +42,19 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                         bruteData.GetChar(4));
                 }
 
-                executer.Connection.Close();
                 bruteData.Close();
-                conex.Close();
+                bruteData.Dispose();
                 executer.Dispose();
-                bruteData = null;
-                conex = null;
+                executer.Connection.Close();
+                conex.Close();
+                conex.Dispose();
 
                 return expediente;
             }
             catch (Exception e)
             {
+                conex.Close();
+                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
             }
@@ -60,11 +62,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
 
         public static DataTable getAllExpedientes()
         {
+            MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
+            conex.Open();
             try
             {
-                MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
-                conex.Open();
-
+                
                 string query = "SELECT NumeroExpediente, NombrePaciente, ApellidoPaciente, DUIPaciente, EdadPaciente, SexoPaciente FROM expediente;";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, conex);
                 DataTable expedientes = new DataTable();
@@ -72,12 +74,14 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
 
                 adapter = null;
                 conex.Close();
-                conex = null;
+                conex.Dispose();
 
                 return expedientes;
             }
             catch (Exception e)
             {
+                conex.Close();
+                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
             }
@@ -88,11 +92,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         //
         public static void createExpediente(Expediente expediente)
         {
+            MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
+            Conex.Open();
             try
             {
-                MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
-                Conex.Open();
-
+                
                 if (expediente != null && !(expediente.getNumeroExpediente() > 0))
                 {
                     
@@ -105,10 +109,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Dispose();
                 }
                 Conex.Close();
-                Conex = null;
+                Conex.Dispose();
             }
             catch (Exception e)
             {
+                Conex.Close();
+                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
             }
@@ -119,11 +125,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         //
         public static void updateExpediente(Expediente expediente)
         {
+            MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
+            Conex.Open();
             try
             {
-                MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
-                Conex.Open();
-
+                
                 if (expediente != null && expediente.getNumeroExpediente() > 0)
                 {
 
@@ -136,10 +142,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Dispose();
                 }
                 Conex.Close();
-                Conex = null;
+                Conex.Dispose();
             }
             catch (Exception e)
             {
+                Conex.Close();
+                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
             }
@@ -150,14 +158,13 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         //
         public static void deleteExpediente(int numExpediente)
         {
+            MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
+            Conex.Open();
             try
             {
-                MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
-                Conex.Open();
-
+                
                 if (numExpediente > 0)
                 {
-
                     string SQLQuery = string.Format("DELETE FROM expediente WHERE NumeroExpediente={0};", numExpediente);
                     MySqlCommand executer = new MySqlCommand(SQLQuery, Conex);
                     executer.ExecuteNonQuery();
@@ -166,10 +173,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Dispose();
                 }
                 Conex.Close();
-                Conex = null;
+                Conex.Dispose();
             }
             catch (Exception e)
             {
+                Conex.Close();
+                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
             }
