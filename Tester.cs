@@ -25,11 +25,20 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         {
 
             DataTable dt = IngresoService.getIngresosActivos();
-            dataGridView1.DataSource = dt;
+            dataGridView1.Rows.Clear();
+            foreach (var dtRow in dt.Rows) 
+            {
+                dataGridView1.Rows.Add(dtRow);
+            }
            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Tester_Load(object sender, EventArgs e)
         {
 
         }

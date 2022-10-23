@@ -187,6 +187,11 @@
     <Compile Include="Models\Nodos\CasoMedico.cs" />
     <Compile Include="Models\Nodos\Persona.cs" />
     <Compile Include="Services\DoctorService.cs" />
+    <Compile Include="Services\ExpedienteService.cs" />
+    <Compile Include="Services\Miscellaneous\AreaMedService.cs" />
+    <Compile Include="Services\Miscellaneous\DepartamentoService.cs" />
+    <Compile Include="Services\Miscellaneous\EspecialidadService.cs" />
+    <Compile Include="Services\SalaService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
     <Compile Include="Tester.cs">
       <SubType>Form</SubType>

@@ -11,7 +11,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models.Nodos
         //ATRIBUTES
         private string DUI;
         private string Nombre;
-        private string Apellido
+        private string Apellido;
         private int Edad;
         private char Sexo;
 
