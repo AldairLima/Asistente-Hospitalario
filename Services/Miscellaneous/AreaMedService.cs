@@ -33,17 +33,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                     }
                 }
 
-                conex.Close();
-                conex.Dispose();
-
                 return areamedicas;
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -58,19 +58,23 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
                 AreaMedica areamedica = null;
-                if (bruteData.HasRows) areamedica = new AreaMedica(codigo, bruteData.GetString(0));
-
-                conex.Close();
-                conex.Dispose();
+                if (bruteData.HasRows)
+                { 
+                    bruteData.Read();
+                    areamedica = new AreaMedica(codigo, bruteData.GetString(0)); 
+                }
 
                 return areamedica;
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -84,15 +88,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 executer.ExecuteNonQuery();
 
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -105,16 +110,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 string query = string.Format("update areamedica set CodigoArea='{0}', AreaMedica='{1}');", actualizado.Codigo, actualizado.Nombre);
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 executer.ExecuteNonQuery();
-
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -128,15 +133,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 executer.ExecuteNonQuery();
 
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
     }

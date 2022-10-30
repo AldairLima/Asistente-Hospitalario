@@ -31,17 +31,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                     }
                 }
 
-                conex.Close();
-                conex.Dispose();
-
                 return especialidades;
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -55,19 +55,23 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
                 Especialidad especialidad = null;
-                if (bruteData.HasRows) especialidad = new Especialidad(codigo, bruteData.GetString(0));
-
-                conex.Close();
-                conex.Dispose();
-
+                if (bruteData.HasRows)
+                {
+                    bruteData.Read();
+                    especialidad = new Especialidad(codigo, bruteData.GetString(0));
+                }
+                
                 return especialidad;
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -79,16 +83,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 string query = string.Format("insert into especialidad() values('{0}','{1}');", nuevo.Codigo, nuevo.Nombre);
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 executer.ExecuteNonQuery();
-
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -101,15 +105,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 executer.ExecuteNonQuery();
 
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -122,15 +127,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 executer.ExecuteNonQuery();
 
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
     }

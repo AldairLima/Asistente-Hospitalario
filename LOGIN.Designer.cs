@@ -100,6 +100,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.txtContrasena.ForeColor = System.Drawing.Color.Black;
             this.txtContrasena.Location = new System.Drawing.Point(702, 413);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(417, 33);
             this.txtContrasena.TabIndex = 13;
             this.txtContrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -113,6 +114,10 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.cbbRango.ForeColor = System.Drawing.SystemColors.Window;
             this.cbbRango.FormattingEnabled = true;
             this.cbbRango.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbbRango.Items.AddRange(new object[] {
+            "Administrador",
+            "Personal Medico",
+            "Secretaria y Enfermeria"});
             this.cbbRango.Location = new System.Drawing.Point(843, 304);
             this.cbbRango.Margin = new System.Windows.Forms.Padding(20);
             this.cbbRango.Name = "cbbRango";

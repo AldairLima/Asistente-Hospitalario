@@ -67,3 +67,12 @@ D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asist
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CoreCompileInputs.cache
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CopyComplete
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Tester.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Agregar_Cirugías.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Agregar_Pacientes_EXPEDIENTE.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Agregar_Pacientes.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ENFERMERA_SECRETARIA.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Enfermera_SECRETAIA_CIRUGÍA.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Enfermera_SECRETARIA_ALTAS.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Enfermera_SECRETARIA_PACIENTE.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Enfermera_SECRETERIA_DOCTORES.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ExpedienteCaso.resources

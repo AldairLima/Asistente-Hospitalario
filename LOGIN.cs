@@ -81,6 +81,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
                     {
                         case 1:
                             ADMINISTRADOR sudoAdmin = new ADMINISTRADOR();
+                            sudoAdmin.setLog(logUsuario);
                             sudoAdmin.FormClosed += Logout;
                             sudoAdmin.Show();
                             break;
