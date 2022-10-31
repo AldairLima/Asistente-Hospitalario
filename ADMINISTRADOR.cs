@@ -62,7 +62,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         private void mainInstance(object sender, FormClosedEventArgs e)
         {
-            this.Close();
+            this.Show();
         }
     }
 }

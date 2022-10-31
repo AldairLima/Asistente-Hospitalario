@@ -73,13 +73,14 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             }
         }
 
-        public static Ingreso getIngreso(string codigoIngreso) {
+        public static Ingreso getCirugia(string codigoCirugia)
+        {
             MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
             conex.Open();
             try
             {
 
-                string query = string.Format("{0}", codigoIngreso);
+                string query = string.Format("{0}", codigoCirugia);
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
@@ -90,7 +91,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     DateTime? altaF = null;
                     if (bruteData.GetValue(3) != null) altaF = bruteData.GetDateTime(3);
 
-                    foundIngreso = new Ingreso(codigoIngreso,
+                    foundIngreso = new Ingreso(codigoCirugia,
                         bruteData.GetInt32(0),
                         bruteData.GetDateTime(1),
                         bruteData.GetString(2),
@@ -113,12 +114,13 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 MessageBox.Show(e.Message);
                 return null;
             }
-            finally 
-            { 
+            finally
+            {
                 conex.Close();
                 conex.Dispose();
             }
         }
+
 
         //INSERTAR
         public static void createIngreso(Ingreso nuevoIngreso) {

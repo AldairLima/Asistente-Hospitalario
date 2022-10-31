@@ -40,6 +40,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models
             }
             return null;
         }
+        public string getPrincipalDoctor() {
+            foreach (string[] doctor in this.Personal) {
+                if (doctor[1].ToLower().Contains("principal")) return doctor[0];
+            }
+            return null;
+        }
 
         //LISTED SETTERS
         public void addPersonal(string codigoDoctor, string rolDoctor) {

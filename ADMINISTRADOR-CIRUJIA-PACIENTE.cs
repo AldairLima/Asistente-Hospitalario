@@ -36,9 +36,9 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         {
             ADMINISTRADOR_PACIENTE admPac = new ADMINISTRADOR_PACIENTE();
             admPac.setLog(this.log);
-            admPac.FormClosed += mainInstance;
             this.Hide();
-            admPac.Show();
+            admPac.ShowDialog();
+            this.Close();
         }
 
         private void ADMINISTRADOR_CIRUJIA_PACIENTE_FormClosed(object sender, FormClosedEventArgs e)
