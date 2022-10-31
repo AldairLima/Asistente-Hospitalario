@@ -40,15 +40,29 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         private void btnInCirugias_Click(object sender, EventArgs e)
         {
             ADMINISTRADOR_CIRUJIA_PACIENTE admSurg = new ADMINISTRADOR_CIRUJIA_PACIENTE();
-            admSurg.ShowDialog();
             this.Hide();
+            admSurg.setLog(this.log);
+            admSurg.ShowDialog();
+            this.Show();
         }
 
         private void btnInPaciente_Click(object sender, EventArgs e)
         {
             ADMINISTRADOR_PACIENTE admPac = new ADMINISTRADOR_PACIENTE();
-            admPac.ShowDialog();
             this.Hide();
+            admPac.setLog(this.log);
+            admPac.ShowDialog();
+            this.Show();
+        }
+
+        private void ADMINISTRADOR_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void mainInstance(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

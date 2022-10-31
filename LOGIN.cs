@@ -41,7 +41,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
 
         
@@ -67,7 +67,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             cbbRango.SelectedIndex = -1;
             cbbRango.Text = "Rango";
             this.Show();
-
         }
 
         private void btnEnter_Click(object sender, EventArgs e)

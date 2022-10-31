@@ -166,6 +166,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ADMINISTRADOR";
             this.Text = "ADMINISTRADOR";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ADMINISTRADOR_FormClosed);
             this.Load += new System.EventHandler(this.ADMINISTRADOR_Load);
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).EndInit();
             this.ResumeLayout(false);
