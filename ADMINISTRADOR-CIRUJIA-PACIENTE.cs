@@ -70,5 +70,19 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             NUEVO.ShowDialog();
             reloadTable();
         }
+
+        private void dgvCirugia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvCirugia.SelectedRows.Count > 0)
+                dgvCirugia.ClearSelection();
+        }
+
+        private void dgvCirugia_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Agregar_Cirugías surg = new Agregar_Cirugías();
+            surg.setCirugia(CirugiaService.getCirugia(dgvCirugia.SelectedRows[0].Cells[0].Value.ToString()));
+            surg.ShowDialog();
+            reloadTable();
+        }
     }
 }

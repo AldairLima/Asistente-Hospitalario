@@ -75,8 +75,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.dgvCirugia.Location = new System.Drawing.Point(211, 212);
             this.dgvCirugia.Name = "dgvCirugia";
             this.dgvCirugia.ReadOnly = true;
+            this.dgvCirugia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCirugia.Size = new System.Drawing.Size(1289, 431);
             this.dgvCirugia.TabIndex = 96;
+            this.dgvCirugia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCirugia_CellContentClick);
+            this.dgvCirugia.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCirugia_CellContentDoubleClick);
             // 
             // hola
             // 

@@ -92,49 +92,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label1.TabIndex = 14;
             this.label1.Text = "Usuario";
             // 
-<<<<<<< HEAD
-            // alphaBlendTextBox1
-            // 
-            this.alphaBlendTextBox1.BackAlpha = 10;
-            this.alphaBlendTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.alphaBlendTextBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphaBlendTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.alphaBlendTextBox1.Location = new System.Drawing.Point(702, 413);
-            this.alphaBlendTextBox1.Name = "alphaBlendTextBox1";
-            this.alphaBlendTextBox1.Size = new System.Drawing.Size(417, 33);
-            this.alphaBlendTextBox1.TabIndex = 13;
-            this.alphaBlendTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AccessibleDescription = "";
-            this.comboBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox1.Location = new System.Drawing.Point(843, 304);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(130, 34);
-            this.comboBox1.TabIndex = 12;
-            this.comboBox1.Tag = "";
-            this.comboBox1.Text = "     Rango";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // alphaBlendTextBox2
-            // 
-            this.alphaBlendTextBox2.BackAlpha = 10;
-            this.alphaBlendTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.alphaBlendTextBox2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphaBlendTextBox2.ForeColor = System.Drawing.Color.Black;
-            this.alphaBlendTextBox2.Location = new System.Drawing.Point(702, 174);
-            this.alphaBlendTextBox2.Name = "alphaBlendTextBox2";
-            this.alphaBlendTextBox2.Size = new System.Drawing.Size(417, 33);
-            this.alphaBlendTextBox2.TabIndex = 11;
-            this.alphaBlendTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-=======
             // txtContrasena
             // 
             this.txtContrasena.BackAlpha = 10;
@@ -180,7 +137,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.txtUsuario.Size = new System.Drawing.Size(417, 33);
             this.txtUsuario.TabIndex = 11;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
->>>>>>> 70b32c959d02aa4412d58fe64b4f8abba35cb4d1
             // 
             // pictureBox1
             // 

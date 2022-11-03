@@ -39,7 +39,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDarAlta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpediente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,19 +142,20 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 120;
             // 
-            // button1
+            // btnDarAlta
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(202, 578);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 37);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Dar de Alta";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDarAlta.BackColor = System.Drawing.Color.Transparent;
+            this.btnDarAlta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDarAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDarAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDarAlta.ForeColor = System.Drawing.Color.White;
+            this.btnDarAlta.Location = new System.Drawing.Point(202, 578);
+            this.btnDarAlta.Name = "btnDarAlta";
+            this.btnDarAlta.Size = new System.Drawing.Size(142, 37);
+            this.btnDarAlta.TabIndex = 49;
+            this.btnDarAlta.Text = "Dar de Alta";
+            this.btnDarAlta.UseVisualStyleBackColor = false;
+            this.btnDarAlta.Click += new System.EventHandler(this.btnDarAlta_Click);
             // 
             // ExpedienteCaso
             // 
@@ -162,13 +163,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1370, 627);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDarAlta);
             this.Controls.Add(this.dgvExpediente);
             this.Controls.Add(this.lblExp);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.label1);
             this.Name = "ExpedienteCaso";
             this.Text = "ExpedienteCaso";
+            this.Load += new System.EventHandler(this.ExpedienteCaso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpediente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -187,6 +189,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDarAlta;
     }
 }
