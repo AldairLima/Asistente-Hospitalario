@@ -31,17 +31,18 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 bruteData.Fill(doctores);
 
                 bruteData.Dispose();
-                Conex.Close();
-                Conex.Dispose();
 
                 return doctores;
             }
             catch (Exception e)
             {
-                Conex.Close();
-                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
+            }
+            finally 
+            {
+                Conex.Close();
+                Conex.Dispose();
             }
         }
 
@@ -58,6 +59,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 Doctor doctor = null;
                 if (bruteData.HasRows)
                 {
+                    bruteData.Read();
                     doctor = new Doctor(
                         bruteData.GetString(0),
                         bruteData.GetString(1), //Usuario
@@ -75,17 +77,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Dispose();
                 }
 
-                Conex.Close();
-                Conex.Dispose();
-                
                 return doctor;
             }
             catch (Exception e)
             {
-                Conex.Close();
-                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
+            }
+            finally
+            {
+                Conex.Close();
+                Conex.Dispose();
             }
         }
 
@@ -109,17 +111,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 executer.ExecuteNonQuery();
                 executer.Connection.Close();
                 executer.Dispose();
-
-                Conex.Close();
-                Conex.Dispose();
-                
+    
             }
             catch (Exception e)
             {
-                Conex.Close();
-                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                Conex.Close();
+                Conex.Dispose();
             }
         }
 
@@ -138,16 +140,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 executer.Connection.Close();
                 executer.Dispose();
 
-                Conex.Close();
-                Conex.Dispose();
-
             }
             catch (Exception e)
             {
-                Conex.Close();
-                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                Conex.Close();
+                Conex.Dispose();
             }
         }
 
@@ -165,16 +167,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 executer.Connection.Close();
                 executer.Dispose();
 
-                Conex.Close();
-                Conex.Dispose();
-
             }
             catch (Exception e)
             {
-                Conex.Close();
-                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                Conex.Close();
+                Conex.Dispose();
             }
         }    
     }

@@ -31,13 +31,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ADMINISTRADOR));
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.roundPicture1 = new Asistente_Hospitalario_de_Pacientes_y_Cirugías.RoundPicture();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnInCirugias = new System.Windows.Forms.Button();
+            this.btnInPaciente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,17 +51,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label2.TabIndex = 50;
             this.label2.Text = "Selecciona lo que quieres ver";
             // 
-            // label1
+            // lblUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(44, 225);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 31);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "USUARIO";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(44, 225);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(146, 31);
+            this.lblUsuario.TabIndex = 44;
+            this.lblUsuario.Text = "USUARIO";
             // 
             // roundPicture1
             // 
@@ -75,75 +73,50 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.roundPicture1.TabIndex = 43;
             this.roundPicture1.TabStop = false;
             // 
-            // button5
+            // btnSalir
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(50, 526);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 37);
-            this.button5.TabIndex = 90;
-            this.button5.Text = "Salir";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(50, 420);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(123, 37);
+            this.btnSalir.TabIndex = 90;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btnInCirugias
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(50, 287);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 37);
-            this.button4.TabIndex = 89;
-            this.button4.Text = "Doctores";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnInCirugias.BackColor = System.Drawing.Color.Transparent;
+            this.btnInCirugias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnInCirugias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInCirugias.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInCirugias.ForeColor = System.Drawing.Color.White;
+            this.btnInCirugias.Location = new System.Drawing.Point(50, 296);
+            this.btnInCirugias.Name = "btnInCirugias";
+            this.btnInCirugias.Size = new System.Drawing.Size(123, 37);
+            this.btnInCirugias.TabIndex = 88;
+            this.btnInCirugias.Text = "Cirugías";
+            this.btnInCirugias.UseVisualStyleBackColor = false;
+            this.btnInCirugias.Click += new System.EventHandler(this.btnInCirugias_Click);
             // 
-            // button3
+            // btnInPaciente
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(50, 402);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 37);
-            this.button3.TabIndex = 88;
-            this.button3.Text = "Cirugías";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(50, 342);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 37);
-            this.button2.TabIndex = 87;
-            this.button2.Text = "ENFERMERA";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(50, 464);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 37);
-            this.button1.TabIndex = 86;
-            this.button1.Text = "Pacientes";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnInPaciente.BackColor = System.Drawing.Color.Transparent;
+            this.btnInPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnInPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInPaciente.ForeColor = System.Drawing.Color.White;
+            this.btnInPaciente.Location = new System.Drawing.Point(50, 358);
+            this.btnInPaciente.Name = "btnInPaciente";
+            this.btnInPaciente.Size = new System.Drawing.Size(123, 37);
+            this.btnInPaciente.TabIndex = 86;
+            this.btnInPaciente.Text = "Pacientes";
+            this.btnInPaciente.UseVisualStyleBackColor = false;
+            this.btnInPaciente.Click += new System.EventHandler(this.btnInPaciente_Click);
             // 
             // ADMINISTRADOR
             // 
@@ -151,17 +124,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(919, 588);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnInCirugias);
+            this.Controls.Add(this.btnInPaciente);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.roundPicture1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ADMINISTRADOR";
             this.Text = "ADMINISTRADOR";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ADMINISTRADOR_FormClosed);
+            this.Load += new System.EventHandler(this.ADMINISTRADOR_Load);
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,12 +144,10 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsuario;
         private RoundPicture roundPicture1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnInCirugias;
+        private System.Windows.Forms.Button btnInPaciente;
     }
 }

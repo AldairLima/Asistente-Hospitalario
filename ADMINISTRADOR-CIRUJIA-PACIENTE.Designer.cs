@@ -44,18 +44,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.roundPicture1 = new Asistente_Hospitalario_de_Pacientes_y_Cirugías.RoundPicture();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnThis = new System.Windows.Forms.Button();
+            this.btnInPaciente = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).BeginInit();
             this.SuspendLayout();
@@ -73,10 +72,10 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Column5,
             this.Doctor,
             this.DiagnosticoFinal});
-            this.dataGridView1.Location = new System.Drawing.Point(211, 142);
+            this.dataGridView1.Location = new System.Drawing.Point(211, 212);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1289, 441);
+            this.dataGridView1.Size = new System.Drawing.Size(1289, 431);
             this.dataGridView1.TabIndex = 96;
             // 
             // hola
@@ -159,7 +158,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(1267, 96);
+            this.textBox2.Location = new System.Drawing.Point(234, 176);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(233, 26);
             this.textBox2.TabIndex = 93;
@@ -186,17 +185,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label2.TabIndex = 87;
             this.label2.Text = "Fecha Cirugías";
             // 
-            // label1
+            // lblUsuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(41, 234);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 31);
-            this.label1.TabIndex = 80;
-            this.label1.Text = "USUARIO";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(41, 234);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(146, 31);
+            this.lblUsuario.TabIndex = 80;
+            this.lblUsuario.Text = "USUARIO";
             // 
             // roundPicture1
             // 
@@ -220,75 +219,49 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.dateTimePicker1.Size = new System.Drawing.Size(248, 26);
             this.dateTimePicker1.TabIndex = 107;
             // 
-            // button5
+            // btnExit
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(47, 527);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(123, 37);
-            this.button5.TabIndex = 112;
-            this.button5.Text = "Salir";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(47, 428);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(123, 37);
+            this.btnExit.TabIndex = 112;
+            this.btnExit.Text = "Salir";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btnThis
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(47, 288);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 37);
-            this.button4.TabIndex = 111;
-            this.button4.Text = "Doctores";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnThis.BackColor = System.Drawing.Color.Transparent;
+            this.btnThis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnThis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThis.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThis.ForeColor = System.Drawing.Color.White;
+            this.btnThis.Location = new System.Drawing.Point(47, 304);
+            this.btnThis.Name = "btnThis";
+            this.btnThis.Size = new System.Drawing.Size(123, 37);
+            this.btnThis.TabIndex = 110;
+            this.btnThis.Text = "Cirugías";
+            this.btnThis.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnInPaciente
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(47, 403);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 37);
-            this.button3.TabIndex = 110;
-            this.button3.Text = "Cirugías";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(47, 343);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 37);
-            this.button2.TabIndex = 109;
-            this.button2.Text = "ENFERMERA";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(47, 465);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 37);
-            this.button1.TabIndex = 108;
-            this.button1.Text = "Pacientes";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnInPaciente.BackColor = System.Drawing.Color.Transparent;
+            this.btnInPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnInPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInPaciente.ForeColor = System.Drawing.Color.White;
+            this.btnInPaciente.Location = new System.Drawing.Point(47, 366);
+            this.btnInPaciente.Name = "btnInPaciente";
+            this.btnInPaciente.Size = new System.Drawing.Size(123, 37);
+            this.btnInPaciente.TabIndex = 108;
+            this.btnInPaciente.Text = "Pacientes";
+            this.btnInPaciente.UseVisualStyleBackColor = false;
+            this.btnInPaciente.Click += new System.EventHandler(this.btnInPaciente_Click);
             // 
             // button6
             // 
@@ -339,28 +312,41 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.Location = new System.Drawing.Point(1342, 61);
+            this.button9.Location = new System.Drawing.Point(309, 141);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(90, 29);
             this.button9.TabIndex = 116;
             this.button9.Text = "DOCTOR";
             this.button9.UseVisualStyleBackColor = false;
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAgregar.Location = new System.Drawing.Point(1118, 158);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(90, 29);
+            this.btnAgregar.TabIndex = 117;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            // 
             // ADMINISTRADOR_CIRUJIA_PACIENTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1589, 634);
+            this.ClientSize = new System.Drawing.Size(1370, 671);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnThis);
+            this.Controls.Add(this.btnInPaciente);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox4);
@@ -368,11 +354,13 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.roundPicture1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ADMINISTRADOR_CIRUJIA_PACIENTE";
             this.Text = "ADMINISTRADOR_CIRUJIA_PACIENTE";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ADMINISTRADOR_CIRUJIA_PACIENTE_FormClosed);
+            this.Load += new System.EventHandler(this.ADMINISTRADOR_CIRUJIA_PACIENTE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).EndInit();
             this.ResumeLayout(false);
@@ -396,17 +384,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsuario;
         private RoundPicture roundPicture1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnThis;
+        private System.Windows.Forms.Button btnInPaciente;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }

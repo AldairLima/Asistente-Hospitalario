@@ -3,6 +3,7 @@ using Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models;
 using Asistente_Hospitalario_de_Pacientes_y_Cirugías.Properties;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -25,8 +26,8 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             conex.Open();
             try
             {
-                
-                string SQLQuery = string.Format("SELECT NombrePaciente, ApellidoPaciente, DUIPaciente, EdadPaciente, SexoPaciente FROM expediente WHERE NumeroExpediente={0};", numExpediente);
+
+                string SQLQuery = string.Format("SELECT NombrePaciente, ApellidoPaciente, DUIPaciente, EdadPaciente, SexoPaciente FROM expediente WHERE NumExpediente={0};", numExpediente);
                 MySqlCommand executer = new MySqlCommand(SQLQuery, conex);
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
@@ -34,6 +35,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
 
                 if (bruteData.HasRows)
                 {
+                    bruteData.Read();
                     expediente = new Expediente(numExpediente,
                         bruteData.GetString(0),
                         bruteData.GetString(1),
@@ -46,44 +48,54 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 bruteData.Dispose();
                 executer.Dispose();
                 executer.Connection.Close();
-                conex.Close();
-                conex.Dispose();
 
                 return expediente;
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
             }
+            finally 
+            {
+                conex.Close();
+                conex.Dispose();
+            }
         }
 
-        public static DataTable getAllExpedientes()
+        public static ArrayList getAllExpedientes()
         {
             MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
             conex.Open();
             try
             {
+                ArrayList expedientes = new ArrayList();
+                string query = "SELECT NumExpediente, NombrePaciente, ApellidoPaciente, DUIPaciente, EdadPaciente, SexoPaciente FROM expediente;";
+                MySqlCommand executer = new MySqlCommand(query, conex);
+                MySqlDataReader bruteData = executer.ExecuteReader();
                 
-                string query = "SELECT NumeroExpediente, NombrePaciente, ApellidoPaciente, DUIPaciente, EdadPaciente, SexoPaciente FROM expediente;";
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, conex);
-                DataTable expedientes = new DataTable();
-                adapter.Fill(expedientes);
-
-                adapter = null;
-                conex.Close();
-                conex.Dispose();
+                if (bruteData.HasRows)
+                {
+                    while (bruteData.Read())
+                    {
+                        Expediente exp = new Expediente(bruteData.GetInt32(0),
+                            bruteData.GetString(1), bruteData.GetString(2), bruteData.GetString(3),
+                                                    bruteData.GetInt32(4), bruteData.GetChar(5));
+                        expedientes.Add(exp);
+                    }
+                }
 
                 return expedientes;
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -108,15 +120,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Connection.Close();
                     executer.Dispose();
                 }
-                Conex.Close();
-                Conex.Dispose();
             }
             catch (Exception e)
             {
-                Conex.Close();
-                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                Conex.Close();
+                Conex.Dispose();
             }
         }
 
@@ -133,7 +146,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 if (expediente != null && expediente.getNumeroExpediente() > 0)
                 {
 
-                    string query = string.Format("update expediente set NombrePaciente='{1}', ApellidoPaciente='{2}', DUIPaciente='{3}', EdadPaciente={4}, SexoPaciente='{5}' where NumeroExpediente={0};",
+                    string query = string.Format("update expediente set NombrePaciente='{1}', ApellidoPaciente='{2}', DUIPaciente='{3}', EdadPaciente={4}, SexoPaciente='{5}' where NumExpediente={0};",
                       expediente.getNumeroExpediente(), expediente.getNombre(), expediente.getApellido(), expediente.getDUI(), expediente.getEdad(), expediente.getCharSexo());
                     MySqlCommand executer = new MySqlCommand(query, Conex);
                     executer.ExecuteNonQuery();
@@ -141,15 +154,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Connection.Close();
                     executer.Dispose();
                 }
-                Conex.Close();
-                Conex.Dispose();
             }
             catch (Exception e)
             {
-                Conex.Close();
-                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                Conex.Close();
+                Conex.Dispose();
             }
         }
 
@@ -165,22 +179,23 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 
                 if (numExpediente > 0)
                 {
-                    string SQLQuery = string.Format("DELETE FROM expediente WHERE NumeroExpediente={0};", numExpediente);
+                    string SQLQuery = string.Format("DELETE FROM expediente WHERE NumExpediente={0};", numExpediente);
                     MySqlCommand executer = new MySqlCommand(SQLQuery, Conex);
                     executer.ExecuteNonQuery();
 
                     executer.Connection.Close();
                     executer.Dispose();
                 }
-                Conex.Close();
-                Conex.Dispose();
             }
             catch (Exception e)
             {
-                Conex.Close();
-                Conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                Conex.Close();
+                Conex.Dispose();
             }
         }
     }

@@ -66,6 +66,7 @@ D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asist
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CoreCompileInputs.cache
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente Hospitalario de Pacientes y Cirugías.csproj.CopyComplete
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Tester.resources
+<<<<<<< HEAD
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\bin\Debug\AMS.Profile.dll
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\bin\Debug\BouncyCastle.Crypto.dll
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\bin\Debug\Google.Protobuf.dll
@@ -107,3 +108,14 @@ C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospital
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Tester.resources
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.PERFIL_AUXILIARES.resources
 C:\INTERFACES\Asistente Hospitalario de Pacientes y Cirugías\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.PERFIL_DOCTORES.resources
+=======
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Agregar_Cirugías.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Agregar_Pacientes_EXPEDIENTE.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Agregar_Pacientes.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ENFERMERA_SECRETARIA.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Enfermera_SECRETAIA_CIRUGÍA.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Enfermera_SECRETARIA_ALTAS.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Enfermera_SECRETARIA_PACIENTE.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Enfermera_SECRETERIA_DOCTORES.resources
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ExpedienteCaso.resources
+>>>>>>> 70b32c959d02aa4412d58fe64b4f8abba35cb4d1

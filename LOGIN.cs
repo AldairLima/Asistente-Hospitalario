@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models;
+using Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +41,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
 
         
@@ -53,9 +55,57 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         }
 
+<<<<<<< HEAD
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+=======
+        private void LOGIN_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            txtUsuario.Text = "";
+            txtContrasena.Text = "";
+            cbbRango.SelectedIndex = -1;
+            cbbRango.Text = "Rango";
+            this.Show();
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Length > 0 && txtContrasena.Text.Length > 0 && cbbRango.SelectedIndex >= 0)
+            {
+                Usuario logUsuario = UsuarioService.ValidateLogin(txtUsuario.Text, txtContrasena.Text, cbbRango.SelectedIndex + 1);
+                if (logUsuario != null)
+                {
+                    switch (logUsuario.getRangoUsuario())
+                    {
+                        case 1:
+                            ADMINISTRADOR sudoAdmin = new ADMINISTRADOR();
+                            sudoAdmin.setLog(logUsuario);
+                            sudoAdmin.FormClosed += Logout;
+                            sudoAdmin.Show();
+                            break;
+                        case 2:
+
+                            break;
+                        case 3:
+                            ENFERMERA_SECRETARIA secretaria = new ENFERMERA_SECRETARIA();
+                            secretaria.FormClosed += Logout;
+                            secretaria.Show();
+                            break;
+                        default:
+                            break;
+                    }
+                    this.Hide();
+                }
+            }
+
+        }
+>>>>>>> 70b32c959d02aa4412d58fe64b4f8abba35cb4d1
     }
 }

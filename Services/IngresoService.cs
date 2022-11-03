@@ -73,47 +73,54 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             }
         }
 
-        public static Ingreso getIngreso(string codigoIngreso) {
+        public static Ingreso getCirugia(string codigoCirugia)
+        {
             MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
             conex.Open();
             try
             {
-                
-                string query = string.Format("{0}",codigoIngreso);
+
+                string query = string.Format("{0}", codigoCirugia);
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
-                DateTime? altaF = null;
-                if (bruteData.GetValue(3) != null) altaF = bruteData.GetDateTime(3);
+                Ingreso foundIngreso = null;
+                if (bruteData.HasRows)
+                {
+                    bruteData.Read();
+                    DateTime? altaF = null;
+                    if (bruteData.GetValue(3) != null) altaF = bruteData.GetDateTime(3);
 
-                Ingreso foundIngreso = new Ingreso(codigoIngreso,
-                    bruteData.GetInt32(0),
-                    bruteData.GetDateTime(1),
-                    bruteData.GetString(2),
-                    altaF,
-                    bruteData.GetString(4),
-                    bruteData.GetString(5),
-                    bruteData.GetInt32(6),
-                    bruteData.GetString(7)
-                    );
+                    foundIngreso = new Ingreso(codigoCirugia,
+                        bruteData.GetInt32(0),
+                        bruteData.GetDateTime(1),
+                        bruteData.GetString(2),
+                        altaF,
+                        bruteData.GetString(4),
+                        bruteData.GetString(5),
+                        bruteData.GetInt32(6),
+                        bruteData.GetString(7));
+                }
 
                 bruteData.Close();
                 bruteData.Dispose();
                 executer.Connection.Close();
                 executer.Dispose();
-                conex.Close();
-                conex.Dispose();
 
                 return foundIngreso;
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
             }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
+            }
         }
+
 
         //INSERTAR
         public static void createIngreso(Ingreso nuevoIngreso) {
@@ -140,15 +147,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
 
                 executer.Connection.Close();
                 executer.Dispose();
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -173,16 +181,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     executer.Connection.Close();
                     executer.Dispose();
                 }
-
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -201,16 +209,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 executer.Connection.Close();
                 executer.Dispose();
 
-                conex.Close();
-                conex.Dispose();
-
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -228,15 +236,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 executer.Connection.Close();
                 executer.Dispose();
 
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
     }

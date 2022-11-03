@@ -186,6 +186,7 @@
     </Compile>
     <Compile Include="Models\Nodos\CasoMedico.cs" />
     <Compile Include="Models\Nodos\Persona.cs" />
+    <Compile Include="Services\CirugiaService.cs" />
     <Compile Include="Services\DoctorService.cs" />
     <Compile Include="Services\ExpedienteService.cs" />
     <Compile Include="Services\Miscellaneous\AreaMedService.cs" />

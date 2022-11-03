@@ -62,7 +62,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(273, 39);
+            this.label3.Size = new System.Drawing.Size(272, 38);
             this.label3.TabIndex = 18;
             this.label3.Text = "Registro de Cirgía";
             // 
@@ -74,7 +74,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(15, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 24);
+            this.label1.Size = new System.Drawing.Size(163, 23);
             this.label1.TabIndex = 19;
             this.label1.Text = "Codigo de Cirugía";
             // 
@@ -96,7 +96,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(343, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 24);
+            this.label2.Size = new System.Drawing.Size(153, 23);
             this.label2.TabIndex = 62;
             this.label2.Text = "Fecha de Cirugía";
             // 
@@ -120,7 +120,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(15, 158);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 24);
+            this.label4.Size = new System.Drawing.Size(169, 23);
             this.label4.TabIndex = 64;
             this.label4.Text = "Nombre y Apellido";
             // 
@@ -142,7 +142,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(467, 159);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 24);
+            this.label5.Size = new System.Drawing.Size(174, 23);
             this.label5.TabIndex = 66;
             this.label5.Text = "N° DE EXPEDIENTE";
             // 
@@ -154,7 +154,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(15, 229);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 24);
+            this.label6.Size = new System.Drawing.Size(53, 23);
             this.label6.TabIndex = 95;
             this.label6.Text = "Edad";
             // 
@@ -166,7 +166,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(204, 229);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 24);
+            this.label7.Size = new System.Drawing.Size(53, 23);
             this.label7.TabIndex = 97;
             this.label7.Text = "Sexo";
             // 
@@ -182,13 +182,15 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.comboBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Masculino\t",
+            "Femenino"});
             this.comboBox2.Location = new System.Drawing.Point(280, 225);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(20);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(105, 34);
+            this.comboBox2.Size = new System.Drawing.Size(105, 33);
             this.comboBox2.TabIndex = 98;
             this.comboBox2.Tag = "";
-            this.comboBox2.Text = "Hombre";
             // 
             // label8
             // 
@@ -198,7 +200,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(422, 229);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 24);
+            this.label8.Size = new System.Drawing.Size(47, 23);
             this.label8.TabIndex = 99;
             this.label8.Text = "Sala";
             // 
@@ -217,7 +219,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.comboBox4.Location = new System.Drawing.Point(492, 225);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(20);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(129, 34);
+            this.comboBox4.Size = new System.Drawing.Size(129, 33);
             this.comboBox4.TabIndex = 100;
             this.comboBox4.Tag = "";
             this.comboBox4.Text = "2B2T";
@@ -230,7 +232,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(15, 319);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 24);
+            this.label9.Size = new System.Drawing.Size(70, 23);
             this.label9.TabIndex = 101;
             this.label9.Text = "Motivo";
             // 
@@ -251,7 +253,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(15, 457);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 24);
+            this.label10.Size = new System.Drawing.Size(50, 23);
             this.label10.TabIndex = 103;
             this.label10.Text = "Área";
             // 
@@ -270,7 +272,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.comboBox5.Location = new System.Drawing.Point(79, 453);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(20);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 34);
+            this.comboBox5.Size = new System.Drawing.Size(121, 33);
             this.comboBox5.TabIndex = 104;
             this.comboBox5.Tag = "";
             this.comboBox5.Text = "Pediatria";
@@ -283,7 +285,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(235, 457);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 24);
+            this.label11.Size = new System.Drawing.Size(67, 23);
             this.label11.TabIndex = 105;
             this.label11.Text = "Doctor";
             // 
@@ -302,7 +304,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.comboBox6.Location = new System.Drawing.Point(322, 453);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(20);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(252, 34);
+            this.comboBox6.Size = new System.Drawing.Size(252, 33);
             this.comboBox6.TabIndex = 106;
             this.comboBox6.Tag = "";
             this.comboBox6.Text = "Lopez Gutierrez";

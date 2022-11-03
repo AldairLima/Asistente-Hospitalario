@@ -33,17 +33,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                     }
                 }
 
-                conex.Close();
-                conex.Dispose();
-
                 return departamentos;
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -58,19 +58,23 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
                 Departamento departamento = null;
-                if (bruteData.HasRows) departamento = new Departamento(codigo, bruteData.GetString(0));
-
-                conex.Close();
-                conex.Dispose();
+                if (bruteData.HasRows)
+                {
+                    bruteData.Read();
+                    departamento = new Departamento(codigo, bruteData.GetString(0));
+                }
 
                 return departamento;
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -83,16 +87,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 string query = string.Format("insert into departamento() values('{0}','{1}');", nuevo.Codigo, nuevo.Nombre);
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 executer.ExecuteNonQuery();
-
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -105,16 +109,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 string query = string.Format("update departamento set CodigoDepartamento='{0}', NombreDepartamento='{1}');", actualizado.Codigo, actualizado.Nombre);
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 executer.ExecuteNonQuery();
-
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
 
@@ -127,16 +131,16 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services.Miscellaneous
                 string query = string.Format("delete from departamento where CodigoDepartamento='{0}';", codigo);
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 executer.ExecuteNonQuery();
-
-                conex.Close();
-                conex.Dispose();
             }
             catch (Exception e)
             {
-                conex.Close();
-                conex.Dispose();
                 MessageBox.Show(e.Message);
                 throw;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
             }
         }
     }
