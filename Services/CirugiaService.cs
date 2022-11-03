@@ -16,13 +16,13 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         public CirugiaService() { }
 
         //SELECT QUERIES
-        public static DataTable getCirugias()
+        public static DataTable getAllCirugias()
         {
             MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString.ToString());
             Conex.Open();
             try
             {
-                string query = "select cc.CodigoCirugia as IDCirujia, ex.NombrePaciente as nombres, ex.ApellidoPaciente as apellidos, ex.EdadPaciente as edad,  cc.FechaCirugia as fecha,  (SELECT ame.AreaMedica FROM areamedica as ame WHERE ame.CodigoArea = ss.CodigoArea) as Area, (SELECT CONCAT(us.NombreUsuario,\" \", us.ApellidoUsuario) FROM usuario as us WHERE us.CodigoUsuario LIKE (select doc.CodigoUsuario FROM doctor as doc WHERE doc.CodigoDoctor = ps.CodigoDoctor)) as Doctor, cc.DiagnosticoFinal FROM cirugia as cc INNER JOIN expediente as ex on cc.NumExpediente =  ex.NumExpediente JOIN salahospital as ss ON cc.CodigoSala = ss.CodigoSala\r\nJOIN personalcirugia as ps ON cc.CodigoCirugia = ps.CodigoCirugia WHERE ps.RolDoctor LIKE '%PRINCIPAL%';";
+                string query = "select cc.CodigoCirugia as IDCirujia, ex.NombrePaciente as nombres, ex.ApellidoPaciente as apellidos, ex.EdadPaciente as edad,  cc.FechaCirugia as fecha,  (SELECT ame.AreaMedica FROM areamedica as ame WHERE ame.CodigoArea = ss.CodigoArea) as Area, (SELECT CONCAT(us.NombreUsuario,' ', us.ApellidoUsuario) FROM usuario as us WHERE us.CodigoUsuario LIKE (select doc.CodigoUsuario FROM doctor as doc WHERE doc.CodigoDoctor = ps.CodigoDoctor)) as Doctor, cc.DiagnosticoFinal FROM cirugia as cc INNER JOIN expediente as ex on cc.NumExpediente =  ex.NumExpediente JOIN salahospital as ss ON cc.CodigoSala = ss.CodigoSala\r\nJOIN personalcirugia as ps ON cc.CodigoCirugia = ps.CodigoCirugia WHERE ps.RolDoctor LIKE '%PRINCIPAL%';";
                 MySqlDataAdapter bruteData = new MySqlDataAdapter(query, Conex);
 
                 DataTable Cirugias = new DataTable();

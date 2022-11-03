@@ -36,6 +36,12 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
+            this.NumeroExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApellidoPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DUIExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EdadExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SexoPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnInCirujia = new System.Windows.Forms.Button();
             this.btnInPaciente = new System.Windows.Forms.Button();
@@ -47,12 +53,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button9 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.roundPicture1 = new Asistente_Hospitalario_de_Pacientes_y_Cirugías.RoundPicture();
-            this.NumeroExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApellidoPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DUIExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EdadExpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SexoPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).BeginInit();
             this.SuspendLayout();
@@ -128,6 +128,49 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.dgvPacientes.TabIndex = 95;
             this.dgvPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPacientes_CellContentClick);
             this.dgvPacientes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPacientes_CellContentDoubleClick);
+            // 
+            // NumeroExpediente
+            // 
+            this.NumeroExpediente.HeaderText = "N° Expediente";
+            this.NumeroExpediente.MinimumWidth = 20;
+            this.NumeroExpediente.Name = "NumeroExpediente";
+            this.NumeroExpediente.ReadOnly = true;
+            this.NumeroExpediente.Width = 190;
+            // 
+            // NombreExpediente
+            // 
+            this.NombreExpediente.HeaderText = "Nombres";
+            this.NombreExpediente.Name = "NombreExpediente";
+            this.NombreExpediente.ReadOnly = true;
+            this.NombreExpediente.Width = 190;
+            // 
+            // ApellidoPaciente
+            // 
+            this.ApellidoPaciente.HeaderText = "Apellidos";
+            this.ApellidoPaciente.Name = "ApellidoPaciente";
+            this.ApellidoPaciente.ReadOnly = true;
+            this.ApellidoPaciente.Width = 190;
+            // 
+            // DUIExpediente
+            // 
+            this.DUIExpediente.HeaderText = "DUI";
+            this.DUIExpediente.Name = "DUIExpediente";
+            this.DUIExpediente.ReadOnly = true;
+            this.DUIExpediente.Width = 120;
+            // 
+            // EdadExpediente
+            // 
+            this.EdadExpediente.HeaderText = "Edad";
+            this.EdadExpediente.Name = "EdadExpediente";
+            this.EdadExpediente.ReadOnly = true;
+            this.EdadExpediente.Width = 50;
+            // 
+            // SexoPaciente
+            // 
+            this.SexoPaciente.HeaderText = "Sexo";
+            this.SexoPaciente.Name = "SexoPaciente";
+            this.SexoPaciente.ReadOnly = true;
+            this.SexoPaciente.Width = 190;
             // 
             // btnExit
             // 
@@ -247,7 +290,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.Location = new System.Drawing.Point(282, 132);
+            this.button9.Location = new System.Drawing.Point(310, 130);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(90, 29);
             this.button9.TabIndex = 110;
@@ -278,49 +321,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.roundPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.roundPicture1.TabIndex = 94;
             this.roundPicture1.TabStop = false;
-            // 
-            // NumeroExpediente
-            // 
-            this.NumeroExpediente.HeaderText = "N° Expediente";
-            this.NumeroExpediente.MinimumWidth = 20;
-            this.NumeroExpediente.Name = "NumeroExpediente";
-            this.NumeroExpediente.ReadOnly = true;
-            this.NumeroExpediente.Width = 190;
-            // 
-            // NombreExpediente
-            // 
-            this.NombreExpediente.HeaderText = "Nombres";
-            this.NombreExpediente.Name = "NombreExpediente";
-            this.NombreExpediente.ReadOnly = true;
-            this.NombreExpediente.Width = 190;
-            // 
-            // ApellidoPaciente
-            // 
-            this.ApellidoPaciente.HeaderText = "Apellidos";
-            this.ApellidoPaciente.Name = "ApellidoPaciente";
-            this.ApellidoPaciente.ReadOnly = true;
-            this.ApellidoPaciente.Width = 190;
-            // 
-            // DUIExpediente
-            // 
-            this.DUIExpediente.HeaderText = "DUI";
-            this.DUIExpediente.Name = "DUIExpediente";
-            this.DUIExpediente.ReadOnly = true;
-            this.DUIExpediente.Width = 120;
-            // 
-            // EdadExpediente
-            // 
-            this.EdadExpediente.HeaderText = "Edad";
-            this.EdadExpediente.Name = "EdadExpediente";
-            this.EdadExpediente.ReadOnly = true;
-            this.EdadExpediente.Width = 50;
-            // 
-            // SexoPaciente
-            // 
-            this.SexoPaciente.HeaderText = "Sexo";
-            this.SexoPaciente.Name = "SexoPaciente";
-            this.SexoPaciente.ReadOnly = true;
-            this.SexoPaciente.Width = 190;
             // 
             // ADMINISTRADOR_PACIENTE
             // 
