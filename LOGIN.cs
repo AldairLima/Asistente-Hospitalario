@@ -52,5 +52,10 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -119,6 +119,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.comboBox1.TabIndex = 12;
             this.comboBox1.Tag = "";
             this.comboBox1.Text = "     Rango";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // alphaBlendTextBox2
             // 
