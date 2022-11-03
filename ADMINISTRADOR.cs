@@ -43,7 +43,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Hide();
             admSurg.setLog(this.log);
             admSurg.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void btnInPaciente_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Hide();
             admPac.setLog(this.log);
             admPac.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void ADMINISTRADOR_FormClosed(object sender, FormClosedEventArgs e)
@@ -60,9 +60,5 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         }
 
-        private void mainInstance(object sender, FormClosedEventArgs e)
-        {
-            this.Show();
-        }
     }
 }

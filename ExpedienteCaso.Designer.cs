@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblExp = new System.Windows.Forms.Label();
+            this.dgvExpediente = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +40,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExpediente)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,49 +55,49 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "Paciente:";
             // 
-            // label2
+            // lblNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(166, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 24);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Nombres y Apellidos";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(166, 66);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(204, 24);
+            this.lblNombre.TabIndex = 46;
+            this.lblNombre.Text = "Nombres y Apellidos";
             // 
-            // label3
+            // lblExp
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1069, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(247, 24);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "N° EXPEDIENTE: 000000";
+            this.lblExp.AutoSize = true;
+            this.lblExp.BackColor = System.Drawing.Color.Transparent;
+            this.lblExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExp.ForeColor = System.Drawing.Color.White;
+            this.lblExp.Location = new System.Drawing.Point(1069, 66);
+            this.lblExp.Name = "lblExp";
+            this.lblExp.Size = new System.Drawing.Size(247, 24);
+            this.lblExp.TabIndex = 47;
+            this.lblExp.Text = "N° EXPEDIENTE: 000000";
             // 
-            // dataGridView1
+            // dgvExpediente
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvExpediente.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.dgvExpediente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvExpediente.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvExpediente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExpediente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.Nombres,
             this.Column1,
             this.Column2,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(202, 110);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1063, 441);
-            this.dataGridView1.TabIndex = 48;
+            this.dgvExpediente.Location = new System.Drawing.Point(202, 110);
+            this.dgvExpediente.Name = "dgvExpediente";
+            this.dgvExpediente.ReadOnly = true;
+            this.dgvExpediente.Size = new System.Drawing.Size(1063, 441);
+            this.dgvExpediente.TabIndex = 48;
             // 
             // Column3
             // 
@@ -161,15 +161,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1478, 627);
+            this.ClientSize = new System.Drawing.Size(1370, 627);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgvExpediente);
+            this.Controls.Add(this.lblExp);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.label1);
             this.Name = "ExpedienteCaso";
             this.Text = "ExpedienteCaso";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExpediente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,9 +178,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblExp;
+        private System.Windows.Forms.DataGridView dgvExpediente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

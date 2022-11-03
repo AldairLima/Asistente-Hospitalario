@@ -25,21 +25,22 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 string query = "select cc.CodigoCirugia as IDCirujia, ex.NombrePaciente as nombres, ex.ApellidoPaciente as apellidos, ex.EdadPaciente as edad,  cc.FechaCirugia as fecha,  (SELECT ame.AreaMedica FROM areamedica as ame WHERE ame.CodigoArea = ss.CodigoArea) as Area, (SELECT CONCAT(us.NombreUsuario,\" \", us.ApellidoUsuario) FROM usuario as us WHERE us.CodigoUsuario LIKE (select doc.CodigoUsuario FROM doctor as doc WHERE doc.CodigoDoctor = ps.CodigoDoctor)) as Doctor, cc.DiagnosticoFinal FROM cirugia as cc INNER JOIN expediente as ex on cc.NumExpediente =  ex.NumExpediente JOIN salahospital as ss ON cc.CodigoSala = ss.CodigoSala\r\nJOIN personalcirugia as ps ON cc.CodigoCirugia = ps.CodigoCirugia WHERE ps.RolDoctor LIKE '%PRINCIPAL%';";
                 MySqlDataAdapter bruteData = new MySqlDataAdapter(query, Conex);
 
-                DataTable Ingresos = new DataTable();
-                bruteData.Fill(Ingresos);
+                DataTable Cirugias = new DataTable();
+                bruteData.Fill(Cirugias);
 
                 bruteData.Dispose();
-                Conex.Close();
-                Conex.Dispose();
-
-                return Ingresos;
+                
+                return Cirugias;
             }
             catch (Exception error)
             {
-                Conex.Close();
-                Conex.Dispose();
                 MessageBox.Show(error.ToString());
                 return null;
+            }
+            finally 
+            {
+                Conex.Close();
+                Conex.Dispose();
             }
         }
 
@@ -49,8 +50,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             conex.Open();
             try
             {
-
-                string query = string.Format("SELECT NumExpediente, FechaCirugia, DiagnosticoCirugia, CodigoSala, DiagnosticoFinal FROM cirugia WHERE CodigoCirugia='{0}'", codigoIngreso);
+                string query = string.Format("SELECT NumExpediente, FechaCirugia, DiagnosticoCirugia, CodigoSala, DiagnosticoFinal FROM cirugia WHERE CodigoCirugia='{0}'", codigoCirugia);
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
@@ -59,11 +59,11 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                 {
                     bruteData.Read();
                     foundCirugia = new Cirugia(codigoCirugia,
-                        bruteData.GetDateTime(1), //fecha cirugia
-                        bruteData.GetString(2),  //DIAGNOSTICO
-                        bruteData.GetString(4),  //diagnostico final
-                        bruteData.GetInt32(0),   //EXPEDIENTE
-                        bruteData.GetString(3)); //SALA
+                        bruteData.GetDateTime(1),   //fecha cirugia
+                        bruteData.GetString(2),     //DIAGNOSTICO
+                        bruteData.GetString(4),     //diagnostico final
+                        bruteData.GetInt32(0),      //EXPEDIENTE
+                        bruteData.GetString(3));    //SALA
                 }
 
                 bruteData.Dispose();
@@ -132,21 +132,17 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         }
 
         //UPDATE
-        public static void updateIngreso(Ingreso ingreso)
+        public static void updateCirugia(Cirugia cirugia)
         {
             MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
             conex.Open();
             try
             {
 
-                if (ingreso.getCodigoIngreso() != null)
+                if (cirugia.getCodigoCirugia() != null)
                 {
-                    string alta = "null", finalD = "null";
-                    if (ingreso.getFechaAlta() != null) alta = "'" + ingreso.getFechaAlta().Value.ToString("yyyy-MM-dd") + "'";
-                    if (ingreso.getDiagnosticoFinal() != null || ingreso.getDiagnosticoFinal().Length > 0) finalD = "'" + ingreso.getDiagnosticoFinal() + "'";
-                    string SQLQuery = string.Format("update ingreso set NumExpediente={1}, FechaIngreso='{2}', FechaAlta={3}, Diagnostico='{4}', CodigoDoctor='{5}', CodigoSala='{6}', NumeroCamilla={7}, DiagnosticoFinal={8} where CodigoIngreso='{0}';",
-                        ingreso.getCodigoIngreso(), ingreso.getNumeroExpediente(), ingreso.getFechaCaso().ToString("yyyy-MM-dd"), alta,
-                        ingreso.getDiagnosticoInicial(), ingreso.getCodigoDoctor(), ingreso.getCodigoSala(), ingreso.getNumeroCamilla(), finalD);
+                    string SQLQuery = string.Format("update cirugia set NumExpediente={1}, FechaCirugia='{2}', DiagnosticoCirugia='{4}', CodigoSala='{6}', DiagnosticoFinal='{8}' where CodigoCirugia='{0}';",
+                        cirugia.getCodigoCirugia(), cirugia.getNumeroExpediente(), cirugia.getFechaCaso().ToString("yyyy-MM-dd"), cirugia.getDiagnosticoInicial(), cirugia.getCodigoSala(), cirugia.getDiagnosticoFinal());
                     MySqlCommand executer = new MySqlCommand(SQLQuery, conex);
                     executer.ExecuteNonQuery();
 
@@ -166,22 +162,31 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             }
         }
 
-        public static void putAlta(string codigoIngreso, DateTime fechaAlta, string diagnosticoFinal = "null")
+        public static void updatePersonal(Cirugia cirugia)
         {
             MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
             conex.Open();
             try
             {
+                if (cirugia.getPersonal().Count > 0 && cirugia.getCodigoCirugia() != null)
+                {
+                    MySqlCommand executer;
+                    foreach (string[] doctor in cirugia.getPersonal())
+                    {
+                        string query = string.Format("UPDATE personalcirugia SET RolDoctor='{2}' WHERE CodigoCirugia='{0}' and CodigoDoctor='{1}';", cirugia.getCodigoCirugia(), doctor[0], doctor[1]);
+                        executer = new MySqlCommand(query, conex);
+                        int rowsAffected = executer.ExecuteNonQuery();
+                        if (rowsAffected < 0) 
+                        {
+                            query = string.Format("DELETE FROM personalcirugia WHERE CodigoCirugia='{0}' && CodigoDoctor='{1}';",cirugia.getCodigoCirugia(), doctor[0]);
+                            executer.CommandText = query;
+                            executer.ExecuteNonQuery();
+                        }
 
-                if (diagnosticoFinal != "null") diagnosticoFinal = "'" + diagnosticoFinal + "'";
-                string SQLQuery = string.Format("update ingreso set FechaAlta='{1}', DiagnosticoFinal={2} where CodigoIngreso='{0}';",
-                        codigoIngreso, fechaAlta.ToString("yyyy-MM-dd"), diagnosticoFinal);
-                MySqlCommand executer = new MySqlCommand(SQLQuery, conex);
-                executer.ExecuteNonQuery();
-
-                executer.Connection.Close();
-                executer.Dispose();
-
+                        executer.Connection.Close();
+                        executer.Dispose();
+                    }
+                }
             }
             catch (Exception e)
             {
@@ -196,15 +201,18 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         }
 
         //DELETE
-        public static void deleteIngreso(string codigoIngreso)
+        public static void deleteIngreso(string codigoCirugia)
         {
             MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
             conex.Open();
             try
             {
 
-                string SQLQuery = string.Format("DELETE FROM ingreso WHERE CodigoIngreso='{0}';", codigoIngreso);
+                string SQLQuery = string.Format("DELETE FROM cirugia WHERE CodigoCirugia='{0}';", codigoCirugia);
                 MySqlCommand executer = new MySqlCommand(SQLQuery, conex);
+                executer.ExecuteNonQuery();
+                string listQuery = string.Format("DELETE FROM personalcirugia WHERE CodigoCirugia='{0}';", codigoCirugia);
+                executer.CommandText = listQuery;
                 executer.ExecuteNonQuery();
 
                 executer.Connection.Close();
