@@ -20,8 +20,9 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Models
         public Cirugia(string codigoCirugia, DateTime fechaCirugia, string diagnosticoCirugia, string diagnosticoFinal, int numeroExpediente, string codigoSala) : base(numeroExpediente, fechaCirugia, diagnosticoCirugia, diagnosticoFinal, codigoSala)
         {
             CodigoCirugia = codigoCirugia;
+            this.Personal = new ArrayList();
         }
-        public Cirugia() { }
+        public Cirugia() { this.Personal = new ArrayList(); }
 
         //GETTERS
         public string getCodigoCirugia() => this.CodigoCirugia;

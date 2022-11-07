@@ -30,7 +30,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ADMINISTRADOR_CIRUJIA_PACIENTE));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCirugia = new System.Windows.Forms.DataGridView();
             this.hola = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,15 +55,15 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCirugia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvCirugia
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCirugia.AllowUserToDeleteRows = false;
+            this.dgvCirugia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCirugia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.hola,
             this.Column1,
             this.Column2,
@@ -72,11 +72,14 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Column5,
             this.Doctor,
             this.DiagnosticoFinal});
-            this.dataGridView1.Location = new System.Drawing.Point(211, 212);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1289, 431);
-            this.dataGridView1.TabIndex = 96;
+            this.dgvCirugia.Location = new System.Drawing.Point(211, 212);
+            this.dgvCirugia.Name = "dgvCirugia";
+            this.dgvCirugia.ReadOnly = true;
+            this.dgvCirugia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCirugia.Size = new System.Drawing.Size(1289, 431);
+            this.dgvCirugia.TabIndex = 96;
+            this.dgvCirugia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCirugia_CellContentClick);
+            this.dgvCirugia.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCirugia_CellContentDoubleClick);
             // 
             // hola
             // 
@@ -247,6 +250,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.btnThis.TabIndex = 110;
             this.btnThis.Text = "Cirugías";
             this.btnThis.UseVisualStyleBackColor = false;
+            this.btnThis.Click += new System.EventHandler(this.btnThis_Click);
             // 
             // btnInPaciente
             // 
@@ -332,6 +336,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.btnAgregar.TabIndex = 117;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // ADMINISTRADOR_CIRUJIA_PACIENTE
             // 
@@ -348,7 +353,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Controls.Add(this.btnThis);
             this.Controls.Add(this.btnInPaciente);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCirugia);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -361,7 +366,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.Text = "ADMINISTRADOR_CIRUJIA_PACIENTE";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ADMINISTRADOR_CIRUJIA_PACIENTE_FormClosed);
             this.Load += new System.EventHandler(this.ADMINISTRADOR_CIRUJIA_PACIENTE_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCirugia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPicture1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -370,7 +375,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCirugia;
         private System.Windows.Forms.DataGridViewTextBoxColumn hola;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

@@ -3,6 +3,7 @@ using Asistente_Hospitalario_de_Pacientes_y_Cirugías.Properties;
 using Microsoft.SqlServer.Server;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -46,7 +47,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             }
         }
 
-        public Doctor getDoctorByCodigo(string CodigoDoctor) {
+        public static Doctor getDoctorByCodigo(string CodigoDoctor) {
             MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
             Conex.Open();
             try
@@ -91,6 +92,54 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             }
         }
 
+
+        public static ArrayList getDoctoresByEspecialidad(string AreaEspecialidad)
+        {
+            MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString);
+            Conex.Open();
+            try
+            {
+                ArrayList doctores = new ArrayList();
+                string query = string.Format("SELECT dt.CodigoDoctor, dt.CodigoUsuario, dt.CodigoEspecialidad FROM doctor as dt JOIN especialidad as sp ON dt.CodigoEspecialidad = sp.CodigoEspecialidad WHERE sp.NombreEspecialidad = '{0}';", AreaEspecialidad);
+                MySqlCommand executer = new MySqlCommand(query, Conex);
+                MySqlDataReader bruteData = executer.ExecuteReader();
+
+                if (bruteData.HasRows)
+                {
+                    while (bruteData.Read())
+                    {
+                        Doctor doctor = new Doctor(
+                        bruteData.GetString(0),
+                        bruteData.GetString(1), //Usuario
+                        bruteData.GetString(2) //Especialidad
+                        );
+                        Usuario usuario = UsuarioService.getUsuarioByKey(bruteData.GetString(1));
+                        Especialidad especialidad = new Especialidad(bruteData.GetString(2), AreaEspecialidad);
+
+                        doctor.setUsuario(usuario);
+                        doctor.setEspecialidad(especialidad);
+
+                        doctores.Add(doctor);
+                    }
+                    bruteData.Close();
+                    bruteData.Dispose();
+                    executer.Connection.Close();
+                    executer.Dispose();
+                }
+
+                return doctores;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+            finally
+            {
+                Conex.Close();
+                Conex.Dispose();
+            }
+        }
         //INSERT
         public static void createDoctor(Doctor doctor, Usuario userD) 
         {

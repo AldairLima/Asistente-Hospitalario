@@ -99,9 +99,26 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDUI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                if (txtDUI.Text.Length == 7 && !txtDUI.Text.Contains("-"))
+                {
+                    txtDUI.Text += "-";
+                    txtDUI.Select(8,0);
+                }
             }
             else
             {

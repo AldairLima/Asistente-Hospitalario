@@ -17,8 +17,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
     public partial class ADMINISTRADOR_PACIENTE : Form
     {
         private Usuario log;
-        private ArrayList expedientes;
-
+        
         public ADMINISTRADOR_PACIENTE()
         {
             InitializeComponent();
@@ -85,9 +84,8 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             int nexp = int.Parse(dgvPacientes.SelectedRows[0].Cells[0].Value.ToString());
             Agregar_Pacientes_EXPEDIENTE UPD = new Agregar_Pacientes_EXPEDIENTE();
             UPD.setExpediente(ExpedienteService.getExpedienteByKey(nexp));
-            UPD.Show();
+            UPD.ShowDialog();
             reloadTable();
-            dgvPacientes.ClearSelection();   
         }
     }
 }

@@ -119,3 +119,4 @@ D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asist
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.Enfermera_SECRETERIA_DOCTORES.resources
 D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.ExpedienteCaso.resources
 >>>>>>> 70b32c959d02aa4412d58fe64b4f8abba35cb4d1
+D:\Ciclo VIII\Tecnicas de Produccion\AHCP\Asistente-Hospitalario\obj\Debug\Asistente_Hospitalario_de_Pacientes_y_Cirugías.DOCTOR_PACIENTES.resources

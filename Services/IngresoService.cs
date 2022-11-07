@@ -22,6 +22,55 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         public IngresoService() { }
 
         //SELECT QUERIES
+        public static ArrayList getIngresosFor(int NumExpediente) {
+            MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
+            conex.Open();
+            try
+            {
+                ArrayList ingresos = new ArrayList();
+                string query = string.Format("SELECT CodigoIngreso, FechaIngreso, FechaAlta, Diagnostico, CodigoDoctor, CodigoSala, NumeroCamilla, DiagnosticoFinal FROM Ingreso WHERE NumExpediente={0};", NumExpediente);
+                MySqlCommand executer = new MySqlCommand(query, conex);
+                MySqlDataReader bruteData = executer.ExecuteReader();
+
+                if (bruteData.HasRows)
+                {
+                    while (bruteData.Read())
+                    {
+                        DateTime? altaF = null;
+                        if (bruteData.GetValue(3) != null) altaF = bruteData.GetDateTime(4);
+
+                        Ingreso foundIngreso = new Ingreso(bruteData.GetString(0),
+                            NumExpediente,
+                            bruteData.GetDateTime(1),
+                            bruteData.GetString(2),
+                            altaF,
+                            bruteData.GetString(4),
+                            bruteData.GetString(5),
+                            bruteData.GetInt32(6),
+                            bruteData.GetString(7));
+                        
+                        ingresos.Add(foundIngreso);
+                    }
+                }
+                bruteData.Close();
+                bruteData.Dispose();
+                executer.Connection.Close();
+                executer.Dispose();
+
+                return ingresos;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
+            }
+        }
+
         public static DataTable getIngresosActivos() {
             MySqlConnection Conex = new MySqlConnection(Settings.Default.ConnectionString.ToString());
             Conex.Open();
@@ -29,21 +78,23 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             {
                 string query = "SELECT ig.CodigoIngreso as Codigo, ig.NumExpediente as Expediente, ex.NombrePaciente as Nombres, ex.ApellidoPaciente as Apellidos, ig.FechaIngreso as Ingresado, ig.Diagnostico as Caso, ig.CodigoDoctor as Doctor, ig.CodigoSala as Sala, ig.NumeroCamilla as Camilla FROM ingreso AS ig JOIN expediente AS ex ON ex.NumExpediente = ig.NumExpediente WHERE ig.FechaAlta is null;";
                 MySqlDataAdapter bruteData = new MySqlDataAdapter(query, Conex);
-                 
+
                 DataTable Ingresos = new DataTable();
                 bruteData.Fill(Ingresos);
 
                 bruteData.Dispose();
-                Conex.Close();
-                Conex.Dispose();
-
+                
                 return Ingresos;
             }
-            catch (Exception error) {
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+                return null;
+            }
+            finally 
+            {
                 Conex.Close();
                 Conex.Dispose();
-                MessageBox.Show(error.ToString());
-                return null;
             }
         }
 
@@ -52,35 +103,35 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             Conex.Open();
             try
             {
-                string query = "SELECT ig.CodigoIngreso as Codigo, ig.NumExpediente as Expediente, ex.NombrePaciente as Nombres, ex.ApellidoPaciente as Apellidos, ig.FechaIngreso as Ingresado, ig.FechaAlta as Alta, ig.Diagnostico as Caso, ig.DiagnosticoFinal as Diagnostico, ig.CodigoDoctor as Doctor, ig.CodigoSala as Sala, ig.NumeroCamilla as Camilla\r\nFROM ingreso AS ig\r\nJOIN expediente AS ex ON ex.NumExpediente = ig.NumExpediente\r\nWHERE ig.FechaAlta is not null;";
+                string query = "SELECT ig.CodigoIngreso as Codigo, ig.NumExpediente as Expediente, ex.NombrePaciente as Nombres, ex.ApellidoPaciente as Apellidos, ig.FechaIngreso as Ingresado, ig.FechaAlta as Alta, ig.Diagnostico as Caso, ig.DiagnosticoFinal as Diagnostico, ig.CodigoDoctor as Doctor, ig.CodigoSala as Sala, ig.NumeroCamilla as Camilla FROM ingreso AS ig\r\nJOIN expediente AS ex ON ex.NumExpediente = ig.NumExpediente\r\nWHERE ig.FechaAlta is not null;";
                 MySqlDataAdapter bruteData = new MySqlDataAdapter(query, Conex);
 
                 DataTable Ingresos = new DataTable();
                 bruteData.Fill(Ingresos);
-
                 bruteData.Dispose();
-                Conex.Close();
-                Conex.Dispose();
-
+                
                 return Ingresos;
             }
             catch (Exception error)
             {
-                Conex.Close();
-                Conex.Dispose();
                 MessageBox.Show(error.ToString());
                 return null;
             }
+            finally
+            {
+                Conex.Close();
+                Conex.Dispose();
+            }
         }
 
-        public static Ingreso getCirugia(string codigoCirugia)
+        public static Ingreso getIngreso(string codigoIngreso)
         {
             MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
             conex.Open();
             try
             {
 
-                string query = string.Format("{0}", codigoCirugia);
+                string query = string.Format("SELECT NumExpediente, FechaIngreso, FechaAlta, Diagnostico, CodigoDoctor, CodigoSala, NumeroCamilla, DiagnosticoFinal FROM Ingreso WHERE CodigoIngreso='{0}';", codigoIngreso);
                 MySqlCommand executer = new MySqlCommand(query, conex);
                 MySqlDataReader bruteData = executer.ExecuteReader();
 
@@ -91,7 +142,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
                     DateTime? altaF = null;
                     if (bruteData.GetValue(3) != null) altaF = bruteData.GetDateTime(3);
 
-                    foundIngreso = new Ingreso(codigoCirugia,
+                    foundIngreso = new Ingreso(codigoIngreso,
                         bruteData.GetInt32(0),
                         bruteData.GetDateTime(1),
                         bruteData.GetString(2),
@@ -121,6 +172,99 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             }
         }
 
+        public static Ingreso getIngresoActivo(int NumExpediente)
+        {
+            MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
+            conex.Open();
+            try
+            {
+
+                string query = string.Format("SELECT CodigoIngreso, FechaIngreso, Diagnostico, CodigoDoctor, CodigoSala, NumeroCamilla FROM Ingreso WHERE NumExpediente={0} and FechaAlta is null;", NumExpediente);
+                MySqlCommand executer = new MySqlCommand(query, conex);
+                MySqlDataReader bruteData = executer.ExecuteReader();
+
+                Ingreso foundIngreso = null;
+                if (bruteData.HasRows)
+                {
+                    bruteData.Read();
+                    foundIngreso = new Ingreso(bruteData.GetString(0),
+                        NumExpediente,
+                        bruteData.GetDateTime(1),
+                        bruteData.GetString(2),
+                        null,
+                        bruteData.GetString(3),
+                        bruteData.GetString(4),
+                        bruteData.GetInt32(5), 
+                        null);
+                }
+
+                bruteData.Close();
+                bruteData.Dispose();
+                executer.Connection.Close();
+                executer.Dispose();
+
+                return foundIngreso;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
+            }
+        }
+
+        public static ArrayList getIngresosByRoom(string codigoSala) {
+            MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
+            conex.Open();
+            try
+            {
+                ArrayList ingresos = new ArrayList();
+                string query = string.Format("SELECT CodigoIngreso, NumExpediente, FechaIngreso, FechaAlta, Diagnostico, CodigoDoctor, NumeroCamilla, DiagnosticoFinal FROM Ingreso WHERE CodigoSala='{0}' and FechaAlta is NULL;", codigoSala);
+                MySqlCommand executer = new MySqlCommand(query, conex);
+                MySqlDataReader bruteData = executer.ExecuteReader();
+
+                if (bruteData.HasRows)
+                {
+                    while (bruteData.Read())
+                    {
+                        DateTime? altaF = null;
+                        if (bruteData.GetValue(4) != null) altaF = bruteData.GetDateTime(4);
+
+                        Ingreso foundIngreso = new Ingreso(bruteData.GetString(0),
+                            bruteData.GetInt32(1),
+                            bruteData.GetDateTime(2),
+                            bruteData.GetString(3),
+                            altaF,
+                            bruteData.GetString(5),
+                            codigoSala,
+                            bruteData.GetInt32(6),
+                            bruteData.GetString(7)); ;
+
+                        ingresos.Add(foundIngreso);
+                    }
+                }
+                bruteData.Close();
+                bruteData.Dispose();
+                executer.Connection.Close();
+                executer.Dispose();
+
+                return ingresos;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
+            }
+        }
 
         //INSERTAR
         public static void createIngreso(Ingreso nuevoIngreso) {
@@ -128,7 +272,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             conex.Open();
             try
             {
-                
                 //CREAR CODIGO Y REVISAR VALORES
                 string cont = string.Format("SELECT COUNT(*) + 1 FROM ingreso WHERE CodigoIngreso LIKE '{0}%'",nuevoIngreso.getCodigoSala());
                 MySqlCommand executer = new MySqlCommand(cont, conex);

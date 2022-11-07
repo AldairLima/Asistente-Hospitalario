@@ -18,7 +18,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
         public SalaService() { }
 
         //CONSULTA
-        public ArrayList getSalasDisponibles() {
+        public static ArrayList getSalasDisponibles() {
             MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
             conex.Open();
             try

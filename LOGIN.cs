@@ -55,12 +55,6 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         }
 
-<<<<<<< HEAD
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-=======
         private void LOGIN_FormClosed(object sender, FormClosedEventArgs e)
         {
 
@@ -91,7 +85,10 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
                             sudoAdmin.Show();
                             break;
                         case 2:
-
+                            DOCTOR_PACIENTES docPac = new DOCTOR_PACIENTES();
+                            docPac.setLog(logUsuario);
+                            docPac.FormClosed += Logout;
+                            docPac.Show();
                             break;
                         case 3:
                             ENFERMERA_SECRETARIA secretaria = new ENFERMERA_SECRETARIA();
@@ -106,6 +103,5 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             }
 
         }
->>>>>>> 70b32c959d02aa4412d58fe64b4f8abba35cb4d1
     }
 }
