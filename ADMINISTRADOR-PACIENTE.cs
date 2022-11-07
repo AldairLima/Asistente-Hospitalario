@@ -17,8 +17,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
     public partial class ADMINISTRADOR_PACIENTE : Form
     {
         private Usuario log;
-        private ArrayList expedientes;
-
+        
         public ADMINISTRADOR_PACIENTE()
         {
             InitializeComponent();

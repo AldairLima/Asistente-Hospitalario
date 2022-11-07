@@ -21,31 +21,36 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         public void setCirugia(Cirugia cirugia) => this.cirugia = cirugia;
 
-        private void LOAD_EXPEDIENTE() {
+        private void LOAD_EXPEDIENTE(int nexp) {
             try
             {
-                int nexp = int.Parse(txtExpediente.Text);
                 Expediente expediente = ExpedienteService.getExpedienteByKey(nexp);
-                txtPaciente.Text = expediente.getNombre() + " " + expediente.getApellido();
-                txtEdad.Text = expediente.getEdad().ToString("D2");
-                //GENERO
-                if (expediente.getCharSexo().Equals('F')) cbbSexo.SelectedIndex = 1;
-                else if (expediente.getCharSexo().Equals('M')) cbbSexo.SelectedIndex = 0;
 
+                if (expediente == null)
+                {
+                    txtPaciente.Text = "";
+                    txtEdad.Text = "";
+                    cbbSexo.SelectedIndex = -1;
+                }
+                else
+                {
+                    txtPaciente.Text = expediente.getNombre() + " " + expediente.getApellido();
+                    txtEdad.Text = expediente.getEdad().ToString("D2");
+                    //GENERO
+                    if (expediente.getCharSexo().Equals('F')) cbbSexo.SelectedIndex = 1;
+                    else if (expediente.getCharSexo().Equals('M')) cbbSexo.SelectedIndex = 0;
+                }
             }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-                throw;
-            } 
+            catch (Exception) { } 
         }
 
         private void LOAD_DOCTORES()
         {
             try
             {
+                cbbDoctor.Items.Clear();
                 ArrayList docs = new ArrayList();
-                docs = DoctorService.getDoctoresByEspecialidad(cbbArea.SelectedValue.ToString());
+                docs = DoctorService.getDoctoresByEspecialidad(cbbArea.SelectedItem.ToString());
                 foreach (Doctor doc in docs)
                 {
                     string option = doc.getCodigoDoctor() + ": " + doc.getUsuario().getNombre() + " " + doc.getUsuario().getApellido();
@@ -53,11 +58,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
                 }
                 cbbDoctor.SelectedIndex = -1;
             }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-                throw;
-            }
+            catch (Exception) { }
         }
 
         public Agregar_Cirugías()
@@ -93,8 +94,9 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
                 lblCirugia.Visible = true;
                 txtCodigo.Text = this.cirugia.getCodigoCirugia();
                 txtCodigo.Visible = true;
+                dtpFecha.Value = this.cirugia.getFechaCaso();
                 txtExpediente.Text = this.cirugia.getNumeroExpediente().ToString("D8");
-                LOAD_EXPEDIENTE();
+                LOAD_EXPEDIENTE(this.cirugia.getNumeroExpediente());
                 txtCaso.Text = this.cirugia.getDiagnosticoInicial();
                 cbbSala.SelectedItem = this.cirugia.getCodigoSala();
                 cbbArea.SelectedIndex = 0;
@@ -124,6 +126,30 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         private void cbbArea_SelectedIndexChanged(object sender, EventArgs e)
         {
             LOAD_DOCTORES();
+        }
+
+        private void txtExpediente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                try
+                {
+                    int nexp = int.Parse(txtExpediente.Text);
+                    LOAD_EXPEDIENTE(nexp);
+                    txtExpediente.Text = nexp.ToString("D8");
+                }
+                catch (Exception) { }
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtExpediente_Click(object sender, EventArgs e)
+        {
+            txtExpediente.SelectAll();
         }
     }
 }

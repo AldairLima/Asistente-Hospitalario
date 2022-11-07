@@ -217,6 +217,54 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías.Services
             }
         }
 
+        public static ArrayList getIngresosByRoom(string codigoSala) {
+            MySqlConnection conex = new MySqlConnection(Settings.Default.ConnectionString);
+            conex.Open();
+            try
+            {
+                ArrayList ingresos = new ArrayList();
+                string query = string.Format("SELECT CodigoIngreso, NumExpediente, FechaIngreso, FechaAlta, Diagnostico, CodigoDoctor, NumeroCamilla, DiagnosticoFinal FROM Ingreso WHERE CodigoSala='{0}' and FechaAlta is NULL;", codigoSala);
+                MySqlCommand executer = new MySqlCommand(query, conex);
+                MySqlDataReader bruteData = executer.ExecuteReader();
+
+                if (bruteData.HasRows)
+                {
+                    while (bruteData.Read())
+                    {
+                        DateTime? altaF = null;
+                        if (bruteData.GetValue(4) != null) altaF = bruteData.GetDateTime(4);
+
+                        Ingreso foundIngreso = new Ingreso(bruteData.GetString(0),
+                            bruteData.GetInt32(1),
+                            bruteData.GetDateTime(2),
+                            bruteData.GetString(3),
+                            altaF,
+                            bruteData.GetString(5),
+                            codigoSala,
+                            bruteData.GetInt32(6),
+                            bruteData.GetString(7)); ;
+
+                        ingresos.Add(foundIngreso);
+                    }
+                }
+                bruteData.Close();
+                bruteData.Dispose();
+                executer.Connection.Close();
+                executer.Dispose();
+
+                return ingresos;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+            finally
+            {
+                conex.Close();
+                conex.Dispose();
+            }
+        }
 
         //INSERTAR
         public static void createIngreso(Ingreso nuevoIngreso) {

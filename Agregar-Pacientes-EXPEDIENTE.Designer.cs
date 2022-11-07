@@ -240,6 +240,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.txtDUI.Size = new System.Drawing.Size(226, 26);
             this.txtDUI.TabIndex = 121;
             this.txtDUI.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDUI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDUI_KeyPress);
             // 
             // Agregar_Pacientes_EXPEDIENTE
             // 

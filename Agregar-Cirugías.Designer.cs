@@ -360,6 +360,8 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.txtExpediente.Name = "txtExpediente";
             this.txtExpediente.Size = new System.Drawing.Size(141, 26);
             this.txtExpediente.TabIndex = 110;
+            this.txtExpediente.Click += new System.EventHandler(this.txtExpediente_Click);
+            this.txtExpediente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpediente_KeyPress);
             // 
             // Agregar_Cirugías
             // 

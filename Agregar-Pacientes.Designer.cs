@@ -30,27 +30,31 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbbExpediente = new System.Windows.Forms.ComboBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbbSexo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.txtCaso = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.cbbDoctor = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cbbSala = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbbCamilla = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbbEspecialidad = new System.Windows.Forms.ComboBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label5
@@ -61,38 +65,40 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(27, 119);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 24);
+            this.label5.Size = new System.Drawing.Size(174, 23);
             this.label5.TabIndex = 67;
             this.label5.Text = "N° DE EXPEDIENTE";
             // 
-            // comboBox1
+            // cbbExpediente
             // 
-            this.comboBox1.AccessibleDescription = "";
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbbExpediente.AccessibleDescription = "";
+            this.cbbExpediente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox1.Location = new System.Drawing.Point(212, 115);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 34);
-            this.comboBox1.TabIndex = 99;
-            this.comboBox1.Tag = "";
+            this.cbbExpediente.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.cbbExpediente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbExpediente.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbExpediente.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbbExpediente.FormattingEnabled = true;
+            this.cbbExpediente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbbExpediente.Location = new System.Drawing.Point(212, 115);
+            this.cbbExpediente.Margin = new System.Windows.Forms.Padding(20);
+            this.cbbExpediente.Name = "cbbExpediente";
+            this.cbbExpediente.Size = new System.Drawing.Size(166, 33);
+            this.cbbExpediente.TabIndex = 99;
+            this.cbbExpediente.Tag = "";
+            this.cbbExpediente.SelectedIndexChanged += new System.EventHandler(this.cbbExpediente_SelectedIndexChanged);
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(496, 117);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 26);
-            this.textBox2.TabIndex = 100;
+            this.txtNombre.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(496, 117);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(226, 26);
+            this.txtNombre.TabIndex = 100;
             // 
             // label1
             // 
@@ -102,7 +108,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(399, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 24);
+            this.label1.Size = new System.Drawing.Size(78, 23);
             this.label1.TabIndex = 101;
             this.label1.Text = "Nombre";
             // 
@@ -114,19 +120,20 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(20, 186);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 24);
+            this.label2.Size = new System.Drawing.Size(91, 23);
             this.label2.TabIndex = 102;
             this.label2.Text = "Apellidos";
             // 
-            // textBox1
+            // txtApellidos
             // 
-            this.textBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(116, 187);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 26);
-            this.textBox1.TabIndex = 103;
+            this.txtApellidos.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellidos.Enabled = false;
+            this.txtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.Location = new System.Drawing.Point(116, 187);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(217, 26);
+            this.txtApellidos.TabIndex = 103;
             // 
             // label6
             // 
@@ -136,29 +143,32 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(365, 186);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 24);
+            this.label6.Size = new System.Drawing.Size(53, 23);
             this.label6.TabIndex = 104;
             this.label6.Text = "Edad";
             // 
-            // comboBox3
+            // cbbSexo
             // 
-            this.comboBox3.AccessibleDescription = "";
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbbSexo.AccessibleDescription = "";
+            this.cbbSexo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox3.Location = new System.Drawing.Point(637, 182);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(20);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(105, 34);
-            this.comboBox3.TabIndex = 107;
-            this.comboBox3.Tag = "";
-            this.comboBox3.Text = "Hombre";
+            this.cbbSexo.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.cbbSexo.Enabled = false;
+            this.cbbSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbSexo.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSexo.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbbSexo.FormattingEnabled = true;
+            this.cbbSexo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbbSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.cbbSexo.Location = new System.Drawing.Point(637, 182);
+            this.cbbSexo.Margin = new System.Windows.Forms.Padding(20);
+            this.cbbSexo.Name = "cbbSexo";
+            this.cbbSexo.Size = new System.Drawing.Size(118, 33);
+            this.cbbSexo.TabIndex = 107;
+            this.cbbSexo.Tag = "";
             // 
             // label7
             // 
@@ -168,28 +178,30 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(561, 186);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 24);
+            this.label7.Size = new System.Drawing.Size(53, 23);
             this.label7.TabIndex = 106;
             this.label7.Text = "Sexo";
             // 
-            // textBox3
+            // txtEdad
             // 
-            this.textBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(433, 184);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(80, 26);
-            this.textBox3.TabIndex = 110;
+            this.txtEdad.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEdad.Enabled = false;
+            this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdad.Location = new System.Drawing.Point(433, 184);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(80, 26);
+            this.txtEdad.TabIndex = 110;
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
-            // richTextBox1
+            // txtCaso
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.richTextBox1.Location = new System.Drawing.Point(473, 351);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(303, 180);
-            this.richTextBox1.TabIndex = 112;
-            this.richTextBox1.Text = "";
+            this.txtCaso.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.txtCaso.Location = new System.Drawing.Point(485, 384);
+            this.txtCaso.Name = "txtCaso";
+            this.txtCaso.Size = new System.Drawing.Size(305, 180);
+            this.txtCaso.TabIndex = 112;
+            this.txtCaso.Text = "";
             // 
             // label9
             // 
@@ -197,31 +209,30 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(414, 355);
+            this.label9.Location = new System.Drawing.Point(418, 405);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 24);
+            this.label9.Size = new System.Drawing.Size(53, 23);
             this.label9.TabIndex = 111;
             this.label9.Text = "Caso";
             // 
-            // comboBox6
+            // cbbDoctor
             // 
-            this.comboBox6.AccessibleDescription = "";
-            this.comboBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbbDoctor.AccessibleDescription = "";
+            this.cbbDoctor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox6.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox6.Location = new System.Drawing.Point(116, 351);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(20);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(252, 34);
-            this.comboBox6.TabIndex = 116;
-            this.comboBox6.Tag = "";
-            this.comboBox6.Text = "Lopez Gutierrez";
+            this.cbbDoctor.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.cbbDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbDoctor.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbDoctor.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbbDoctor.FormattingEnabled = true;
+            this.cbbDoctor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbbDoctor.Location = new System.Drawing.Point(116, 400);
+            this.cbbDoctor.Margin = new System.Windows.Forms.Padding(20);
+            this.cbbDoctor.Name = "cbbDoctor";
+            this.cbbDoctor.Size = new System.Drawing.Size(257, 33);
+            this.cbbDoctor.TabIndex = 116;
+            this.cbbDoctor.Tag = "";
             // 
             // label11
             // 
@@ -229,31 +240,31 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(27, 355);
+            this.label11.Location = new System.Drawing.Point(27, 404);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 24);
+            this.label11.Size = new System.Drawing.Size(67, 23);
             this.label11.TabIndex = 115;
             this.label11.Text = "Doctor";
             // 
-            // comboBox5
+            // cbbSala
             // 
-            this.comboBox5.AccessibleDescription = "";
-            this.comboBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbbSala.AccessibleDescription = "";
+            this.cbbSala.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox5.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox5.Location = new System.Drawing.Point(116, 262);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(20);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 34);
-            this.comboBox5.TabIndex = 114;
-            this.comboBox5.Tag = "";
-            this.comboBox5.Text = "Pediatria";
+            this.cbbSala.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.cbbSala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbSala.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSala.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbbSala.FormattingEnabled = true;
+            this.cbbSala.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbbSala.Location = new System.Drawing.Point(116, 262);
+            this.cbbSala.Margin = new System.Windows.Forms.Padding(20);
+            this.cbbSala.Name = "cbbSala";
+            this.cbbSala.Size = new System.Drawing.Size(134, 33);
+            this.cbbSala.TabIndex = 114;
+            this.cbbSala.Tag = "";
+            this.cbbSala.SelectedIndexChanged += new System.EventHandler(this.cbbSala_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -263,9 +274,9 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(33, 266);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 24);
+            this.label10.Size = new System.Drawing.Size(47, 23);
             this.label10.TabIndex = 113;
-            this.label10.Text = "Área";
+            this.label10.Text = "Sala";
             // 
             // label3
             // 
@@ -275,7 +286,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(26, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(327, 39);
+            this.label3.Size = new System.Drawing.Size(326, 38);
             this.label3.TabIndex = 117;
             this.label3.Text = "Registro de pacientes";
             // 
@@ -287,28 +298,28 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(292, 266);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 24);
+            this.label4.Size = new System.Drawing.Size(98, 23);
             this.label4.TabIndex = 118;
             this.label4.Text = "N° Camilla";
             // 
-            // comboBox2
+            // cbbCamilla
             // 
-            this.comboBox2.AccessibleDescription = "";
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbbCamilla.AccessibleDescription = "";
+            this.cbbCamilla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox2.Location = new System.Drawing.Point(422, 262);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(20);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(153, 34);
-            this.comboBox2.TabIndex = 119;
-            this.comboBox2.Tag = "";
+            this.cbbCamilla.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.cbbCamilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbCamilla.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCamilla.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbbCamilla.FormattingEnabled = true;
+            this.cbbCamilla.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbbCamilla.Location = new System.Drawing.Point(422, 262);
+            this.cbbCamilla.Margin = new System.Windows.Forms.Padding(20);
+            this.cbbCamilla.Name = "cbbCamilla";
+            this.cbbCamilla.Size = new System.Drawing.Size(166, 33);
+            this.cbbCamilla.TabIndex = 119;
+            this.cbbCamilla.Tag = "";
             // 
             // button1
             // 
@@ -323,6 +334,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button1.TabIndex = 121;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -337,6 +349,7 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button5.TabIndex = 120;
             this.button5.Text = "Guardar";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
@@ -351,37 +364,99 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
             this.button2.TabIndex = 122;
             this.button2.Text = "Agregar Expediente";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(33, 346);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 23);
+            this.label8.TabIndex = 123;
+            this.label8.Text = "Area";
+            // 
+            // cbbEspecialidad
+            // 
+            this.cbbEspecialidad.AccessibleDescription = "";
+            this.cbbEspecialidad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbEspecialidad.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.cbbEspecialidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbEspecialidad.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbEspecialidad.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbbEspecialidad.FormattingEnabled = true;
+            this.cbbEspecialidad.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbbEspecialidad.Location = new System.Drawing.Point(116, 342);
+            this.cbbEspecialidad.Margin = new System.Windows.Forms.Padding(20);
+            this.cbbEspecialidad.Name = "cbbEspecialidad";
+            this.cbbEspecialidad.Size = new System.Drawing.Size(257, 33);
+            this.cbbEspecialidad.TabIndex = 124;
+            this.cbbEspecialidad.Tag = "";
+            this.cbbEspecialidad.SelectedIndexChanged += new System.EventHandler(this.cbbEspecialidad_SelectedIndexChanged);
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.dtpFecha.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            this.dtpFecha.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtpFecha.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(196)))), ((int)(((byte)(255)))));
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.dtpFecha.Location = new System.Drawing.Point(546, 344);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(244, 26);
+            this.dtpFecha.TabIndex = 126;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(418, 347);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(122, 23);
+            this.label12.TabIndex = 125;
+            this.label12.Text = "Ingresado el:";
             // 
             // Agregar_Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(800, 576);
+            this.ClientSize = new System.Drawing.Size(813, 583);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.cbbEspecialidad);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbbCamilla);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox6);
+            this.Controls.Add(this.cbbDoctor);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cbbSala);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtCaso);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.txtEdad);
+            this.Controls.Add(this.cbbSexo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.cbbExpediente);
             this.Controls.Add(this.label5);
             this.Name = "Agregar_Pacientes";
             this.Text = "Agregar_Pacientes";
+            this.Load += new System.EventHandler(this.Agregar_Pacientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,26 +464,30 @@ namespace Asistente_Hospitalario_de_Pacientes_y_Cirugías
 
         #endregion
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox cbbExpediente;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbbSexo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.RichTextBox txtCaso;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cbbDoctor;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbbSala;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbbCamilla;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbbEspecialidad;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label label12;
     }
 }
